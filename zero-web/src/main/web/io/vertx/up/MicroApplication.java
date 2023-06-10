@@ -8,7 +8,7 @@ import io.vertx.up.boot.anima.DetectScatter;
 import io.vertx.up.boot.anima.InfixScatter;
 import io.vertx.up.boot.anima.PointScatter;
 import io.vertx.up.boot.anima.Scatter;
-import io.vertx.up.runtime.ZeroArcane;
+import io.vertx.up.runtime.ZeroOn;
 import io.vertx.up.util.Ut;
 
 /**
@@ -20,9 +20,7 @@ public class MicroApplication {
     public static void run(final Class<?> clazz, final String... args) {
         // 构造启动器容器
         final KLauncher<Vertx> container = KLauncher.create(clazz, args);
-        container.start((vertx, config) ->
-
-            ZeroArcane.start(vertx, config, MicroApplication::runComponent));
+        container.start(ZeroOn.webFn(MicroApplication::runComponent));
     }
 
     private static void runComponent(final Vertx vertx, final HConfig config) {

@@ -1,4 +1,4 @@
-package io.vertx.up;
+package io.vertx.up.bang;
 
 import io.horizon.eon.VMessage;
 import io.horizon.specification.boot.HLauncher;
@@ -23,6 +23,8 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.function.Consumer;
 
 /**
+ * 标准容器 Service / Application 启动器
+ *
  * @author lang : 2023-05-30
  */
 public class ZeroLauncher implements HLauncher<Vertx> {

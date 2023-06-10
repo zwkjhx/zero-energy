@@ -5,7 +5,7 @@ import io.horizon.uca.boot.KLauncher;
 import io.macrocosm.specification.config.HConfig;
 import io.vertx.core.Vertx;
 import io.vertx.up.boot.anima.*;
-import io.vertx.up.runtime.ZeroArcane;
+import io.vertx.up.runtime.ZeroOn;
 import io.vertx.up.util.Ut;
 
 /**
@@ -16,9 +16,7 @@ public class VertxApplication {
     public static void run(final Class<?> clazz, final String... args) {
         // 构造启动器容器
         final KLauncher<Vertx> container = KLauncher.create(clazz, args);
-        container.start((vertx, config) ->
-
-            ZeroArcane.start(vertx, config, VertxApplication::runComponent));
+        container.start(ZeroOn.webFn(VertxApplication::runComponent));
     }
 
     private static void runComponent(final Vertx vertx, final HConfig config) {

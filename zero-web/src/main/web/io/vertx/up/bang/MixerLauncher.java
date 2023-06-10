@@ -1,4 +1,4 @@
-package io.vertx.up;
+package io.vertx.up.bang;
 
 import io.horizon.eon.em.EmApp;
 import io.horizon.specification.boot.HLauncher;

@@ -19,11 +19,11 @@ import java.util.Objects;
  *
  * @author lang : 2023-05-30
  */
-public class OnBoot implements HOn<OnBootConfig> {
+public class ZeroOn implements HOn<ZeroOnConfiguration> {
 
-    private static OnBootConfig INSTANCE;
+    private static ZeroOnConfiguration INSTANCE;
 
-    public static OnBootConfig configuration() {
+    public static ZeroOnConfiguration configuration() {
         Objects.requireNonNull(INSTANCE);
         return INSTANCE;
     }
@@ -47,7 +47,7 @@ public class OnBoot implements HOn<OnBootConfig> {
      * @return {@link Boolean} 实例
      */
     @Override
-    public Boolean configure(final OnBootConfig config) {
+    public Boolean configure(final ZeroOnConfiguration config) {
         // 1. 环境初始化
         ZeroAnno.configure();
         // 2. 扫描环境之后才可以拿到 Injections
@@ -57,7 +57,7 @@ public class OnBoot implements HOn<OnBootConfig> {
     }
 
     @Override
-    public OnBootConfig store() {
+    public ZeroOnConfiguration store() {
         return configuration();
     }
 }

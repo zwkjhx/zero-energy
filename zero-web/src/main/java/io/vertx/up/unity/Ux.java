@@ -6,7 +6,6 @@ import io.horizon.eon.VString;
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.horizon.exception.WebException;
 import io.horizon.uca.qr.Pagination;
-import io.macrocosm.specification.program.HArk;
 import io.modello.atom.normalize.KRuleTerm;
 import io.modello.specification.HRecord;
 import io.vertx.core.*;
@@ -1058,13 +1057,6 @@ public final class Ux {
     }
 
     // ---------------------- Agent mode usage --------------------------
-    public static Future<Boolean> registryMod(final Vertx vertx, final JsonObject initConfig) {
-        return RegistryLegacy.registryMod(vertx, initConfig);
-    }
-
-    public static Future<Boolean> registryMod(final Vertx vertx, final JsonObject initConfig, final Set<HArk> arkSet) {
-        return Registry.registryMod(vertx, initConfig, arkSet);
-    }
 
     public static Vertx nativeVertx() {
         return VertxNative.nativeVertx();

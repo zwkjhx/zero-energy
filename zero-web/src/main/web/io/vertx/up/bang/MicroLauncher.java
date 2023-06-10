@@ -1,4 +1,4 @@
-package io.vertx.up;
+package io.vertx.up.bang;
 
 import io.horizon.specification.boot.HLauncher;
 import io.macrocosm.specification.boot.HOff;
@@ -15,6 +15,8 @@ import io.vertx.up.util.Ut;
 import java.util.function.Consumer;
 
 /**
+ * 微服务的 API Gateway 启动器
+ *
  * @author lang : 2023-05-30
  */
 public class MicroLauncher implements HLauncher<Vertx> {
