@@ -1,9 +1,9 @@
 package io.vertx.up.commune;
 
+import io.horizon.atom.datamation.KMap;
 import io.horizon.uca.qr.syntax.Ir;
 import io.modello.specification.HRecord;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BTree;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.util.Ut;
 
@@ -144,11 +144,11 @@ class ActJObject extends ActMapping implements Serializable {
     /*
      * JsonObject -> Record
      */
-    HRecord getRecord(final HRecord definition, final BTree mapping) {
+    HRecord getRecord(final HRecord definition, final KMap mapping) {
         return this.getRecord(this.data, definition, mapping);
     }
 
-    JsonObject getJson(final BTree mapping) {
+    JsonObject getJson(final KMap mapping) {
         if (this.isBefore(mapping)) {
             return this.mapper().in(this.data, mapping.child());
         } else {

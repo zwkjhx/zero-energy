@@ -1,9 +1,9 @@
 package io.vertx.up.commune;
 
+import io.horizon.atom.datamation.KMap;
 import io.horizon.eon.em.EmAop;
 import io.modello.specification.HRecord;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BTree;
 import io.vertx.up.uca.adminicle.FieldMapper;
 import io.vertx.up.uca.adminicle.Mapper;
 import io.vertx.up.util.Ut;
@@ -18,7 +18,7 @@ public abstract class ActMapping implements Serializable {
     /*
      * ActIn
      */
-    protected HRecord getRecord(final Object input, final HRecord definition, final BTree mapping) {
+    protected HRecord getRecord(final Object input, final HRecord definition, final KMap mapping) {
         final HRecord record = definition.createNew();
         if (input instanceof String) {
             final String key = (String) input;
@@ -46,7 +46,7 @@ public abstract class ActMapping implements Serializable {
     /*
      * Whether it's before automatic
      */
-    protected boolean isBefore(final BTree mapping) {
+    protected boolean isBefore(final KMap mapping) {
         if (Objects.isNull(mapping)) {
             return false;
         }
@@ -59,7 +59,7 @@ public abstract class ActMapping implements Serializable {
     /*
      * Whether it's after automatic
      */
-    protected boolean isAfter(final BTree mapping) {
+    protected boolean isAfter(final KMap mapping) {
         if (Objects.isNull(mapping)) {
             return false;
         }

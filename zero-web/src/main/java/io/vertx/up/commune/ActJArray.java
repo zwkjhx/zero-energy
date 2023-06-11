@@ -1,9 +1,9 @@
 package io.vertx.up.commune;
 
+import io.horizon.atom.datamation.KMap;
 import io.modello.specification.HRecord;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BTree;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.util.Ut;
 
@@ -86,7 +86,7 @@ class ActJArray extends ActMapping implements Serializable {
         }
     }
 
-    HRecord[] getRecords(final HRecord definition, final BTree mapping) {
+    HRecord[] getRecords(final HRecord definition, final KMap mapping) {
         /* Record Init */
         final int size = this.data.size();
         final HRecord[] records = new HRecord[size];
@@ -102,7 +102,7 @@ class ActJArray extends ActMapping implements Serializable {
         return records;
     }
 
-    JsonArray getJson(final BTree mapping) {
+    JsonArray getJson(final KMap mapping) {
         if (this.isBefore(mapping)) {
             final JsonArray normalized = new JsonArray();
             Ut.itJArray(this.data)

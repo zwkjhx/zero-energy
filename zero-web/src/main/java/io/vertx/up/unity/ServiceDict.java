@@ -6,8 +6,8 @@ import io.vertx.core.Future;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.DFabric;
-import io.vertx.up.atom.exchange.DSetting;
+import io.horizon.atom.datamation.KDictAtom;
+import io.horizon.atom.datamation.KDictConfig;
 import io.vertx.up.uca.adminicle.FieldMapper;
 import io.vertx.up.util.Ut;
 
@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentMap;
 class ServiceDict {
     private static final Cc<Integer, Dictionary> CC_DICT = Cc.open();
 
-    static <T> Future<T> dictTo(final T record, final DFabric fabric) {
+    static <T> Future<T> dictTo(final T record, final KDictAtom fabric) {
         final FieldMapper mapper = new FieldMapper();
         if (record instanceof JsonObject) {
             final JsonObject ref = (JsonObject) record;
@@ -41,7 +41,7 @@ class ServiceDict {
         }
     }
 
-    static Future<ConcurrentMap<String, JsonArray>> dictCalc(final DSetting dict, final MultiMap paramMap) {
+    static Future<ConcurrentMap<String, JsonArray>> dictCalc(final KDictConfig dict, final MultiMap paramMap) {
         if (Objects.isNull(dict)) {
             /*
              * Not `Dict` configured

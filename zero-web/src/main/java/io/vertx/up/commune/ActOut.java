@@ -1,5 +1,7 @@
 package io.vertx.up.commune;
 
+import io.horizon.atom.datamation.KMapping;
+import io.horizon.atom.datamation.KMap;
 import io.horizon.eon.em.web.HttpStatusCode;
 import io.horizon.uca.log.Annal;
 import io.modello.specification.HRecord;
@@ -7,8 +9,6 @@ import io.vertx.core.Future;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BMapping;
-import io.vertx.up.atom.exchange.BTree;
 import io.vertx.up.unity.Ux;
 import io.vertx.up.util.Ut;
 
@@ -108,17 +108,17 @@ public class ActOut extends ActMapping implements Serializable {
     /*
      * Envelop processing
      */
-    public Envelop envelop(final BTree mapping) {
+    public Envelop envelop(final KMap mapping) {
         final Object response = this.envelop.data();
         if (response instanceof JsonObject || response instanceof JsonArray) {
             if (this.isAfter(mapping)) {
-                final BMapping bMapping;
+                final KMapping kMapping;
                 if (Objects.isNull(this.identifier)) {
-                    bMapping = mapping.child();
+                    kMapping = mapping.child();
                 } else {
-                    bMapping = mapping.child(this.identifier);
-                    if (!bMapping.isEmpty()) {
-                        LOGGER.info("identifier `{0}`, extract child mapping. {1}", this.identifier, bMapping.toString());
+                    kMapping = mapping.child(this.identifier);
+                    if (!kMapping.isEmpty()) {
+                        LOGGER.info("identifier `{0}`, extract child mapping. {1}", this.identifier, kMapping.toString());
                     }
                 }
                 final HttpStatusCode status = this.envelop.status();
@@ -126,14 +126,14 @@ public class ActOut extends ActMapping implements Serializable {
                     /*
                      * JsonObject here for mapping
                      */
-                    final JsonObject normalized = this.mapper().out(((JsonObject) response), bMapping);
+                    final JsonObject normalized = this.mapper().out(((JsonObject) response), kMapping);
                     return Envelop.success(normalized, status).from(this.envelop);
                 } else {
                     /*
                      * JsonArray here for mapping
                      */
                     final JsonArray normalized = new JsonArray();
-                    Ut.itJArray((JsonArray) response).map(item -> this.mapper().out(item, bMapping))
+                    Ut.itJArray((JsonArray) response).map(item -> this.mapper().out(item, kMapping))
                         .forEach(normalized::add);
                     return Envelop.success(normalized, status).from(this.envelop);
                 }

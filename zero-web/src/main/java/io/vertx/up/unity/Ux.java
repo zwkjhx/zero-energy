@@ -2,6 +2,8 @@ package io.vertx.up.unity;
 
 import io.horizon.atom.common.Kv;
 import io.horizon.atom.common.Refer;
+import io.horizon.atom.datamation.KDictAtom;
+import io.horizon.atom.datamation.KDictConfig;
 import io.horizon.eon.VString;
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.horizon.exception.WebException;
@@ -17,12 +19,10 @@ import io.vertx.core.shareddata.ClusterSerializable;
 import io.vertx.ext.auth.User;
 import io.vertx.ext.web.FileUpload;
 import io.vertx.ext.web.RoutingContext;
-import io.vertx.up.atom.exchange.DConsumer;
-import io.vertx.up.atom.exchange.DFabric;
-import io.vertx.up.atom.exchange.DSetting;
+import io.horizon.atom.datamation.KDictUse;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.commune.Envelop;
-import io.vertx.up.commune.config.Integration;
+import io.modello.atom.app.KIntegration;
 import io.vertx.up.commune.record.Apt;
 import io.vertx.up.commune.secure.AegisItem;
 import io.vertx.up.commune.secure.Vis;
@@ -1078,15 +1078,15 @@ public final class Ux {
     /*
      * Keep following dict method
      */
-    public static ConcurrentMap<String, DConsumer> dictEpsilon(final JsonObject epsilon) {
-        return DConsumer.mapEpsilon(epsilon);
+    public static ConcurrentMap<String, KDictUse> dictEpsilon(final JsonObject epsilon) {
+        return KDictUse.mapEpsilon(epsilon);
     }
 
-    public static Future<ConcurrentMap<String, JsonArray>> dictCalc(final DSetting dict, final MultiMap paramsMap) {
+    public static Future<ConcurrentMap<String, JsonArray>> dictCalc(final KDictConfig dict, final MultiMap paramsMap) {
         return ServiceDict.dictCalc(dict, paramsMap);
     }
 
-    public static <T> Future<T> dictTo(final T record, final DFabric fabric) {
+    public static <T> Future<T> dictTo(final T record, final KDictAtom fabric) {
         return ServiceDict.dictTo(record, fabric);
     }
 
@@ -1240,7 +1240,7 @@ public final class Ux {
     }
 
     public static class Ldap {
-        public static UxLdap on(final Integration integration) {
+        public static UxLdap on(final KIntegration integration) {
             return CACHE.CC_LDAP.pick(() -> new UxLdap(integration), String.valueOf(integration.hashCode()));
         }
     }

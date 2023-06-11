@@ -1,10 +1,10 @@
 package io.vertx.up.commune;
 
+import io.horizon.atom.datamation.KMap;
 import io.modello.specification.HRecord;
 import io.vertx.core.MultiMap;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.atom.exchange.BTree;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.fn.Fn;
 import io.vertx.zero.exception.ActSpecificationException;
@@ -40,7 +40,7 @@ public class ActIn extends ActMapping implements Serializable {
     private transient ActJArray jarray;
     private transient HRecord definition;
 
-    private transient BTree mapping;
+    private transient KMap mapping;
 
     public ActIn(final Envelop envelop) {
         /* Envelop reference here */
@@ -71,7 +71,7 @@ public class ActIn extends ActMapping implements Serializable {
         this.file = new ActFile(stream);
     }
 
-    public ActIn bind(final BTree mapping) {
+    public ActIn bind(final KMap mapping) {
         this.mapping = mapping;
         return this;
     }
