@@ -3,7 +3,7 @@ package io.aeon.experiment.mu;
 import io.modello.atom.normalize.KAttribute;
 import io.modello.atom.normalize.KMarkAtom;
 import io.modello.atom.normalize.KMarkAttribute;
-import io.modello.atom.normalize.RReference;
+import io.modello.atom.reference.RReference;
 import io.modello.specification.atom.HAttribute;
 import io.modello.specification.atom.HRule;
 import io.vertx.core.json.JsonArray;
