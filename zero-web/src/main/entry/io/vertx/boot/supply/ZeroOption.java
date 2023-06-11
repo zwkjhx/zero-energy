@@ -1,4 +1,4 @@
-package io.vertx.up.supply;
+package io.vertx.boot.supply;
 
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;

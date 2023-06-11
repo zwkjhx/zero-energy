@@ -1,4 +1,4 @@
-package io.vertx.up.supply;
+package io.vertx.boot.supply;
 
 import io.horizon.eon.VMessage;
 import io.horizon.eon.VValue;

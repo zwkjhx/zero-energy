@@ -1,7 +1,7 @@
 package io.vertx.boot.lighter;
 
 import io.macrocosm.specification.boot.HOn;
-import io.vertx.up.supply.Electy;
+import io.vertx.boot.supply.Electy;
 
 import java.util.Objects;
 

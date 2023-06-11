@@ -1,4 +1,4 @@
-package io.vertx.up.supply;
+package io.vertx.boot.supply;
 
 import io.horizon.fn.Actuator;
 import io.horizon.uca.boot.KPivot;

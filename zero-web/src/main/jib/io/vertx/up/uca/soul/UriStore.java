@@ -1,9 +1,9 @@
 package io.vertx.up.uca.soul;
 
+import io.vertx.boot.supply.Electy;
 import io.vertx.up.annotations.Address;
 import io.vertx.up.atom.agent.Event;
 import io.vertx.up.atom.worker.Receipt;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.annotation.Annotation;

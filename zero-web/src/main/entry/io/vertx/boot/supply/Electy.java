@@ -1,4 +1,4 @@
-package io.vertx.up.supply;
+package io.vertx.boot.supply;
 
 import com.google.inject.Injector;
 import io.horizon.fn.Actuator;

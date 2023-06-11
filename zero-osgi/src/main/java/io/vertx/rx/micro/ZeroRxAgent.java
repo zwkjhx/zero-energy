@@ -5,6 +5,7 @@ import io.horizon.specification.boot.HAxis;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.reactivex.rxjava3.core.Single;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.http.HttpServerOptions;
 import io.vertx.rx.rs.router.EventAxis;
 import io.vertx.rx.rs.router.RouterAxis;
@@ -14,7 +15,6 @@ import io.vertx.rxjava3.ext.web.Route;
 import io.vertx.rxjava3.ext.web.Router;
 import io.vertx.up.annotations.Agent;
 import io.vertx.up.eon.em.container.ServerType;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.text.MessageFormat;

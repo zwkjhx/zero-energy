@@ -3,12 +3,12 @@ package io.vertx.boot;
 import io.horizon.runtime.Runner;
 import io.horizon.uca.boot.KLauncher;
 import io.macrocosm.specification.config.HConfig;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.Vertx;
 import io.vertx.up.boot.anima.DetectScatter;
 import io.vertx.up.boot.anima.InfixScatter;
 import io.vertx.up.boot.anima.PointScatter;
 import io.vertx.up.boot.anima.Scatter;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 /**

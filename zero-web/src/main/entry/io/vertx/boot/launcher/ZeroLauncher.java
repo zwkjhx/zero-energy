@@ -6,6 +6,7 @@ import io.horizon.uca.log.Log;
 import io.macrocosm.specification.boot.HOff;
 import io.macrocosm.specification.boot.HOn;
 import io.macrocosm.specification.config.HConfig;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.ClusterOptions;
 import io.vertx.core.Vertx;
 import io.vertx.core.VertxOptions;
@@ -14,7 +15,6 @@ import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.spi.cluster.ClusterManager;
 import io.vertx.up.boot.options.VertxSetUp;
 import io.vertx.up.commune.Envelop;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;

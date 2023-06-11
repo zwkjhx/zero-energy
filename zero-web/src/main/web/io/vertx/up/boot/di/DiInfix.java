@@ -3,11 +3,11 @@ package io.vertx.up.boot.di;
 import io.horizon.eon.VMessage;
 import io.horizon.uca.log.Annal;
 import io.reactivex.rxjava3.core.Observable;
+import io.vertx.boot.supply.Electy;
 import io.vertx.up.annotations.Infusion;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.plugin.Infix;
 import io.vertx.up.runtime.ZeroStore;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;

@@ -1,5 +1,6 @@
 package io.vertx.up.backbone.hunt;
 
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.Future;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
@@ -11,7 +12,6 @@ import io.vertx.up.atom.container.VInstance;
 import io.vertx.up.backbone.Aim;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.unity.Ux;
 
 import java.util.Objects;

@@ -1,8 +1,8 @@
 package io.vertx.up.uca.job.store;
 
+import io.vertx.boot.supply.Electy;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 
 import java.util.Set;
 

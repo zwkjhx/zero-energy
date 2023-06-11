@@ -1,5 +1,6 @@
 package io.vertx.up.extension.router;
 
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.SockOptions;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServerOptions;
@@ -10,7 +11,6 @@ import io.vertx.up.extension.AbstractAres;
 import io.vertx.up.extension.Ares;
 import io.vertx.up.extension.router.websocket.AresBridge;
 import io.vertx.up.extension.router.websocket.AresSockJs;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;

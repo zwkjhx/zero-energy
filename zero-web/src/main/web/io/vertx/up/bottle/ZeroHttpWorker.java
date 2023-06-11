@@ -2,6 +2,7 @@ package io.vertx.up.bottle;
 
 import io.horizon.eon.VValue;
 import io.horizon.uca.log.Annal;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.up.annotations.Ipc;
@@ -12,7 +13,6 @@ import io.vertx.up.backbone.invoker.InvokerUtil;
 import io.vertx.up.backbone.invoker.JetSelector;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;

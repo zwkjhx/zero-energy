@@ -3,8 +3,8 @@ package io.vertx.up.boot.di;
 import com.google.inject.Injector;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
+import io.vertx.boot.supply.Electy;
 import io.vertx.up.atom.container.VInstance;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 import jakarta.inject.Named;
 

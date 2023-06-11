@@ -3,6 +3,7 @@ package io.vertx.rx.rs.router;
 import io.horizon.specification.boot.HAxis;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
+import io.vertx.boot.supply.Electy;
 import io.vertx.rx.micro.ZeroRxEndurer;
 import io.vertx.rx.rs.dispatch.StandardVerifier;
 import io.vertx.rxjava3.ext.web.Route;
@@ -16,7 +17,6 @@ import io.vertx.up.backbone.dispatch.ModeSplitter;
 import io.vertx.up.backbone.router.Hub;
 import io.vertx.up.backbone.router.Verifier;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.util.Set;

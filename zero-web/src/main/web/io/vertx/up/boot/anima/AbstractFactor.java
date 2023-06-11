@@ -3,10 +3,10 @@ package io.vertx.up.boot.anima;
 import io.horizon.uca.log.Annal;
 import io.macrocosm.specification.config.HConfig;
 import io.vertx.boot.configuration.BootStore;
+import io.vertx.boot.supply.Electy;
 import io.vertx.up.eon.em.container.ServerType;
 import io.vertx.up.exception.boot.RpcPreparingException;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 
 import java.util.HashSet;
 import java.util.Set;

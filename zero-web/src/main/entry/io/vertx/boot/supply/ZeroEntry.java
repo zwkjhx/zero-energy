@@ -1,4 +1,4 @@
-package io.vertx.up.supply;
+package io.vertx.boot.supply;
 
 import io.aeon.refine.Ho;
 import io.macrocosm.specification.config.HConfig;

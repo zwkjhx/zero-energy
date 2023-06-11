@@ -2,6 +2,7 @@ package io.vertx.up.backbone.router;
 
 import io.horizon.specification.boot.HAxis;
 import io.horizon.uca.log.Annal;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.http.HttpServerRequest;
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.ext.web.Route;
@@ -9,7 +10,6 @@ import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.atom.agent.Event;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;

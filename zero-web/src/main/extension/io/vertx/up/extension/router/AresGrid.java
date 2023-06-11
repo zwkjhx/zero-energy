@@ -1,6 +1,7 @@
 package io.vertx.up.extension.router;
 
 import io.horizon.eon.VValue;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
 import io.vertx.core.Handler;
@@ -8,7 +9,6 @@ import io.vertx.up.atom.worker.Remind;
 import io.vertx.up.backbone.invoker.Invoker;
 import io.vertx.up.backbone.invoker.JetSelector;
 import io.vertx.up.eon.em.container.RemindType;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;

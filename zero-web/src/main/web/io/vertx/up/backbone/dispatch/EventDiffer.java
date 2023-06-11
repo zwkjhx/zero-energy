@@ -2,6 +2,7 @@ package io.vertx.up.backbone.dispatch;
 
 import io.horizon.eon.VValue;
 import io.horizon.uca.log.Annal;
+import io.vertx.boot.supply.Electy;
 import io.vertx.core.eventbus.Message;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.annotations.Address;
@@ -11,7 +12,6 @@ import io.vertx.up.backbone.Aim;
 import io.vertx.up.backbone.hunt.AsyncAim;
 import io.vertx.up.backbone.hunt.OneWayAim;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 import io.vertx.zero.exception.ReturnTypeException;
 import io.vertx.zero.exception.WorkerMissingException;
