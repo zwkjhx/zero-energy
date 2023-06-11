@@ -1,4 +1,4 @@
-package io.vertx.up.runtime;
+package io.vertx.up.supply;
 
 import io.horizon.fn.Actuator;
 import io.horizon.uca.boot.KPivot;
@@ -14,13 +14,12 @@ import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.configuration.BootStore;
 import io.vertx.up.eon.configure.YmlCore;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.runtime.ZeroStore;
 import io.vertx.up.util.Ut;
 
 import java.util.*;
-import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -44,29 +43,10 @@ import static io.aeon.refine.Ho.LOG;
  *
  * @author lang : 2023-06-10
  */
-public class ZeroOn {
+class ZeroEnroll {
     private static final String MSG_EXT_COMPONENT = "Extension components initialized {0}";
-    private static final String MSG_EXT_CONFIGURATION = "Extension configuration missing {0}";
 
     private static final List<HRegistry.Mod<Vertx>> REGISTERS = new Vector<>();
-
-    public static BiConsumer<Vertx, HConfig> webFn(final BiConsumer<Vertx, HConfig> endFn) {
-        // 1. 环境注册
-        return (vertx, config) -> registryStart(vertx, config)
-
-
-            // 2. 是否执行扩展，调用 Fn.passion 带顺序
-            .compose(arkSet -> whenExtension(config, () -> Fn.passion(Boolean.TRUE,
-                // 2.1. 扩展：配置
-                (arks) -> registryAmbient(vertx, config, arkSet),
-                // 2.2. 扩展：初始化
-                (arks) -> registryArk(vertx, config, arkSet))
-            ))
-
-
-            // 3. 注册结束之后的统一回调
-            .onComplete(registryEnd(() -> endFn.accept(vertx, config)));
-    }
 
     /**
      * 「Vertx启动后」扩展流程二
@@ -78,12 +58,12 @@ public class ZeroOn {
      *
      * </code></pre>
      */
-    public static Future<Set<HArk>> registryStart(final Vertx vertx, final HConfig config) {
+    static Future<Set<HArk>> registryStart(final Vertx vertx, final HConfig config) {
         final KPivot<Vertx> pivot = KPivot.of(vertx);
         return pivot.registryAsync(config);
     }
 
-    public static Handler<AsyncResult<Boolean>> registryEnd(final Actuator actuator) {
+    static Handler<AsyncResult<Boolean>> registryEnd(final Actuator actuator) {
         return res -> {
             if (res.succeeded()) {
                 final boolean registered = res.result();
@@ -104,36 +84,10 @@ public class ZeroOn {
         };
     }
 
-    public static Future<Boolean> whenExtension(final HConfig config, final Supplier<Future<Boolean>> supplier) {
-        /*
-         * 新版不再支持旧模式注册：
-         * init:
-         *    extension:
-         *      - component: xxx
-         *    compile:
-         *      - component: xxx
-         *        order: 1
-         * 全流程执行
-         * 1. (PlugIn) 配置之前
-         *    执行模块配置
-         * 2. (PlugIn）初始化之前
-         *    执行模块初始化
-         */
-        final BootStore store = BootStore.singleton();
-        if (!store.isInit()) {
-            LOG.Env.info(ZeroOn.class, MSG_EXT_CONFIGURATION, config);
-            return Future.succeededFuture(Boolean.TRUE);
-        }
-        if (!ZeroStore.is(YmlCore.init.__KEY)) {
-            return Future.succeededFuture(Boolean.TRUE);
-        }
-        return supplier.get();
-    }
-
     /*
      * 「Vertx启动后」扩展流程三 / 配置
      */
-    public static Future<Boolean> registryAmbient(final Vertx vertx, final HConfig config, final Set<HArk> arkSet) {
+    static Future<Boolean> registryAmbient(final Vertx vertx, final HConfig config, final Set<HArk> arkSet) {
         return registryAsync(config, pre -> pre.beforeModAsync(vertx, config, arkSet), () -> {
             final HAmbient ambient = KPivot.running();
             final List<HRegistry.Mod<Vertx>> registers = registerComponent();
@@ -148,7 +102,7 @@ public class ZeroOn {
     /*
      * 「Vertx启动后」扩展流程三 / 初始化
      */
-    public static Future<Boolean> registryArk(final Vertx vertx, final HConfig config, final Set<HArk> arkSet) {
+    static Future<Boolean> registryArk(final Vertx vertx, final HConfig config, final Set<HArk> arkSet) {
         return registryAsync(config, pre -> pre.beforeModAsync(vertx, config, arkSet), () -> {
             final List<Future<Boolean>> futures = new ArrayList<>();
             /*
@@ -186,7 +140,7 @@ public class ZeroOn {
     private static List<HRegistry.Mod<Vertx>> registerComponent() {
         if (REGISTERS.isEmpty()) {
             final JsonObject initConfig = ZeroStore.option(YmlCore.init.__KEY);
-            LOG.Env.info(ZeroOn.class, MSG_EXT_COMPONENT, initConfig.encode());
+            LOG.Env.info(ZeroEnroll.class, MSG_EXT_COMPONENT, initConfig.encode());
             // 1. nativeComponent first
             final JsonArray bridges = Ut.valueJArray(initConfig, YmlCore.init.CONFIGURE);
             // 2. 针对每个组件的统一初始化

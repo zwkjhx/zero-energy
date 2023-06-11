@@ -3,7 +3,7 @@ package io.vertx.up.backbone.argument;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.backbone.Filler;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 
 import java.util.Map;
 
@@ -19,7 +19,7 @@ public class ContextFiller implements Filler {
                 return value;
             } else {
                 final String valueStr = value.toString();
-                return ZeroSerializer.getValue(paramType, valueStr);
+                return ZeroType.value(paramType, valueStr);
             }
         }, value);
     }

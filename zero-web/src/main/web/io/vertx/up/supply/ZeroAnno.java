@@ -1,4 +1,4 @@
-package io.vertx.up.runtime;
+package io.vertx.up.supply;
 
 import com.google.inject.Injector;
 import io.aeon.atom.KSwitcher;
@@ -7,7 +7,6 @@ import io.horizon.runtime.Runner;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.macrocosm.specification.nc.HAeon;
-import io.vertx.core.http.HttpMethod;
 import io.vertx.up.atom.agent.Event;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.atom.worker.Receipt;
@@ -16,6 +15,7 @@ import io.vertx.up.boot.origin.*;
 import io.vertx.up.commune.secure.Aegis;
 import io.vertx.up.eon.em.container.ServerType;
 import io.vertx.up.fn.Fn;
+import io.vertx.up.runtime.ZeroPack;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;
@@ -26,34 +26,31 @@ import java.util.concurrent.ConcurrentMap;
 /**
  * Transfer Class<?> set to difference mapping.
  */
-public class ZeroAnno {
+class ZeroAnno {
 
-    private static final Annal LOGGER = Annal.get(ZeroAnno.class);
-
+    static final Injector DI;
     /*
      * Class Scanner
      */
-    private final static Set<Class<?>> ENDPOINTS = new HashSet<>();
-    private final static Set<Class<?>> QUEUES = new HashSet<>();
-    private final static Set<Class<?>> WORKERS = new HashSet<>();
-    private final static Set<Class<?>> TPS = new HashSet<>();
-    private final static ConcurrentMap<String, Method> QAS = new ConcurrentHashMap<>();
-
+    final static Set<Class<?>> ENDPOINTS = new HashSet<>();
+    final static Set<Event> EVENTS = new HashSet<>();
+    final static ConcurrentMap<String, Set<Event>> FILTERS = new ConcurrentHashMap<>();
+    final static ConcurrentMap<String, Method> IPCS = new ConcurrentHashMap<>();
+    final static Set<Mission> JOBS = new HashSet<>();
+    final static ConcurrentMap<String, Method> QAS = new ConcurrentHashMap<>();
+    final static ConcurrentMap<ServerType, List<Class<?>>> AGENTS = new ConcurrentHashMap<>();
+    final static Set<Class<?>> QUEUES = new HashSet<>();
+    final static Set<Class<?>> WORKERS = new HashSet<>();
+    final static Set<Class<?>> TPS = new HashSet<>();
     /*
      * Component Scanner
      */
-    private final static Set<Receipt> RECEIPTS = new HashSet<>();
-    private final static Set<Event> EVENTS = new HashSet<>();
-    private final static ConcurrentMap<String, Set<Event>> FILTERS = new ConcurrentHashMap<>();
-    private final static ConcurrentMap<ServerType, List<Class<?>>> AGENTS = new ConcurrentHashMap<>();
+    final static Set<Receipt> RECEIPTS = new HashSet<>();
+    final static Set<Remind> SOCKS = new HashSet<>();
+    private static final Annal LOGGER = Annal.get(ZeroAnno.class);
     private final static Set<Aegis> WALLS = new TreeSet<>();
-    private final static ConcurrentMap<String, Method> IPCS = new ConcurrentHashMap<>();
-    private final static Set<Mission> JOBS = new HashSet<>();
-    private final static Set<Remind> SOCKS = new HashSet<>();
     private static final Cc<String, Set<Aegis>> CC_WALL = Cc.open();
-
     private static final Set<Class<?>> CLASS_SET;
-    private static final Injector DI;
 
     static {
         CLASS_SET = ZeroPack.getClasses();
@@ -66,7 +63,7 @@ public class ZeroAnno {
      * Move to main thread to do init instead of static block initialization
      * Here all the class must be prepared
      */
-    public static void configure() {
+    static void configure() {
         /*
          * Phase 1:
          * -- Scan the whole environment to extract all classes those will be analyzed.
@@ -132,7 +129,7 @@ public class ZeroAnno {
                 EVENTS.stream().filter(Objects::nonNull)
                     /* Only Uri Pattern will be extracted to URI_PATHS */
                     .filter(item -> 0 < item.getPath().indexOf(":"))
-                    .forEach(ZeroUri::resolve);
+                    .forEach(item -> ZeroUri.resolve(item.getPath(), item.getMethod()));
                 ZeroUri.report();
             }),
             // @Wall -> Authenticate, Authorize
@@ -174,93 +171,7 @@ public class ZeroAnno {
         LOGGER.info("Zero Timer: Meditate = {0} ms", String.valueOf(System.currentTimeMillis() - end));
     }
 
-    public static Method getQaS(final String address) {
-        return QAS.getOrDefault(address, null);
-    }
-
-    public static Injector getDi() {
-        return DI;
-    }
-
-    /**
-     * Get all agents.
-     *
-     * @return agent map
-     */
-    public static ConcurrentMap<ServerType, List<Class<?>>> getAgents() {
-        return AGENTS;
-    }
-
-    /**
-     * Tp Clients
-     *
-     * @return client set
-     */
-    public static Set<Class<?>> getTps() {
-        return TPS;
-    }
-
-    /**
-     * Get Jobs for current
-     */
-    public static Set<Mission> getJobs() {
-        return JOBS;
-    }
-
-    /**
-     * Get all workers
-     *
-     * @return worker set
-     */
-    public static Set<Class<?>> getWorkers() {
-        return WORKERS;
-    }
-
-    /**
-     * Get all receipts
-     *
-     * @return receipts set
-     */
-    public static Set<Receipt> getReceipts() {
-        return RECEIPTS;
-    }
-
-    /**
-     * Get all endpoints
-     *
-     * @return endpoint set
-     */
-    public static Set<Class<?>> getEndpoints() {
-        return ENDPOINTS;
-    }
-
-    public static ConcurrentMap<String, Method> getIpcs() {
-        return IPCS;
-    }
-
-    /**
-     * Get all envents
-     *
-     * @return event set
-     */
-    public static Set<Event> getEvents() {
-        return EVENTS;
-    }
-
-    public static Set<Remind> getSocks() {
-        return SOCKS;
-    }
-
-    /**
-     * Get all filters
-     *
-     * @return filter map JSR340
-     */
-    public static ConcurrentMap<String, Set<Event>> getFilters() {
-        return FILTERS;
-    }
-
-    public static Cc<String, Set<Aegis>> getWalls() {
+    static Cc<String, Set<Aegis>> getWalls() {
         if (CC_WALL.isEmpty()) {
             // To Avoid Filling the value more than once
             WALLS.forEach(wall -> {
@@ -278,9 +189,5 @@ public class ZeroAnno {
             });
         }
         return CC_WALL;
-    }
-
-    public static String recoveryUri(final String uri, final HttpMethod method) {
-        return ZeroUri.recovery(uri, method);
     }
 }

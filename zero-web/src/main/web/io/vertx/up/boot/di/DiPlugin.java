@@ -4,7 +4,7 @@ import com.google.inject.Injector;
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
 import io.vertx.up.atom.container.VInstance;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 import jakarta.inject.Named;
 
@@ -38,7 +38,7 @@ public class DiPlugin {
 
     // 直接创建一个单例
     public <T> T createSingleton(final Class<?> clazz) {
-        final Injector di = ZeroAnno.getDi();
+        final Injector di = Electy.ucaDI();
         /*
          * Add @Named Support
          */
@@ -61,7 +61,7 @@ public class DiPlugin {
 
     // 创建一个新的
     public Object createProxy(final Class<?> clazz, final Method action) {
-        final Injector di = ZeroAnno.getDi();
+        final Injector di = Electy.ucaDI();
         final Object instance;
         if (clazz.isInterface()) {
             final Class<?> implClass = Ut.child(clazz);

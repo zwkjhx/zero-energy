@@ -4,6 +4,7 @@ import io.horizon.eon.VName;
 import io.horizon.eon.VValue;
 import io.horizon.specification.boot.HAxis;
 import io.horizon.uca.log.Annal;
+import io.vertx.boot.configuration.BootStore;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.http.HttpMethod;
@@ -17,11 +18,10 @@ import io.vertx.up.backbone.router.EventAxis;
 import io.vertx.up.backbone.router.FilterAxis;
 import io.vertx.up.backbone.router.RouterAxis;
 import io.vertx.up.backbone.router.WallAxis;
-import io.vertx.up.configuration.BootStore;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.eon.em.Etat;
 import io.vertx.up.extension.Ares;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.uca.monitor.MeasureAxis;
 import io.vertx.up.uca.registry.Uddi;
 import io.vertx.up.uca.registry.UddiRegistry;
@@ -46,7 +46,7 @@ public class ZeroHttpAgent extends AbstractVerticle {
     private static final Annal LOGGER = Annal.get(ZeroHttpAgent.class);
 
     private static final ConcurrentMap<Integer, String> SERVICES =
-        ZeroOption.getServerNames();
+        Electy.serverName();
 
     @Override
     public void start() {
@@ -88,7 +88,7 @@ public class ZeroHttpAgent extends AbstractVerticle {
         final Ares ares = Ares.instance(this.vertx);
 
         /* Get the default HttpServer Options **/
-        ZeroOption.getServerOptions().forEach((port, option) -> {
+        Electy.optionHttp().forEach((port, option) -> {
             /*
              * To enable extend of StompServer, there should be
              * Some code logical to set WebSocket Sub Protocols such as
@@ -134,7 +134,7 @@ public class ZeroHttpAgent extends AbstractVerticle {
 
     @Override
     public void stop() {
-        Ut.itMap(ZeroOption.getServerOptions(), (port, config) -> {
+        Ut.itMap(Electy.optionHttp(), (port, config) -> {
             // Enabled micro mode.
             if (STORE.isEtcd()) {
                 // Template call registry to modify the status of current service.
@@ -147,7 +147,7 @@ public class ZeroHttpAgent extends AbstractVerticle {
     private void registryServer(final HttpServerOptions options,
                                 final Router router) {
         final Integer port = options.getPort();
-        final AtomicInteger out = ZeroOption.ATOMIC_LOG.get(port);
+        final AtomicInteger out = Electy.serverLog().get(port);
         if (VValue.ZERO == out.getAndIncrement()) {
             // 1. Build logs for current server;
             final String portLiteral = String.valueOf(port);

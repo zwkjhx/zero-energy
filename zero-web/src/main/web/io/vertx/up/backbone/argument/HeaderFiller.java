@@ -3,7 +3,7 @@ package io.vertx.up.backbone.argument;
 import io.vertx.core.http.HttpServerRequest;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.backbone.Filler;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 
 /**
  * 「Co」JSR311 for .@HeaderParam
@@ -26,6 +26,6 @@ public class HeaderFiller implements Filler {
                         final RoutingContext context) {
         // Extract request from header
         final HttpServerRequest request = context.request();
-        return ZeroSerializer.getValue(paramType, request.getHeader(name));
+        return ZeroType.value(paramType, request.getHeader(name));
     }
 }

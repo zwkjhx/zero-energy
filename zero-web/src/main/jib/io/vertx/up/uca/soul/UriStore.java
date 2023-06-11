@@ -3,7 +3,7 @@ package io.vertx.up.uca.soul;
 import io.vertx.up.annotations.Address;
 import io.vertx.up.atom.agent.Event;
 import io.vertx.up.atom.worker.Receipt;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.annotation.Annotation;
@@ -24,9 +24,9 @@ class UriStore {
         /*
          * Initialize data here.
          */
-        final Set<Receipt> receipts = ZeroAnno.getReceipts();
+        final Set<Receipt> receipts = Electy.ucaReceipt();
         final ConcurrentMap<String, Receipt> receiptMap = Ut.elementMap(new ArrayList<>(receipts), Receipt::getAddress);
-        final Set<Event> events = ZeroAnno.getEvents();
+        final Set<Event> events = Electy.ucaEvent();
         /*
          * UriMeta building
          */

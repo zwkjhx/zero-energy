@@ -1,8 +1,7 @@
-package io.vertx.up.runtime;
+package io.vertx.up.supply;
 
 import io.horizon.uca.log.Annal;
 import io.vertx.core.http.HttpMethod;
-import io.vertx.up.atom.agent.Event;
 import io.vertx.up.unity.RegexPath;
 
 import java.util.HashSet;
@@ -12,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.regex.Pattern;
 
-public class ZeroUri {
+class ZeroUri {
 
     private static final Annal LOGGER = Annal.get(ZeroUri.class);
 
@@ -27,16 +26,9 @@ public class ZeroUri {
     };
 
     /*
-     * This method is for programming
-     */
-    static void resolve(final Event event) {
-        resolve(event.getMethod(), event.getPath());
-    }
-
-    /*
      * This method is for dynamic API/SERVICE, zero extension used.
      */
-    public static void resolve(final HttpMethod method, final String uri) {
+    static void resolve(final String uri, final HttpMethod method) {
         if (Objects.isNull(method)) {
             URIS.keySet().forEach(each -> addSingle(each, uri));
         } else {
@@ -44,7 +36,7 @@ public class ZeroUri {
         }
     }
 
-    public static boolean isMatch(final HttpMethod method, final String requestUri) {
+    static boolean isMatch(final HttpMethod method, final String requestUri) {
         return URIS.get(method).stream()
             .anyMatch(uri -> isMatch(requestUri, uri));
     }

@@ -4,7 +4,7 @@ import io.vertx.core.file.FileSystem;
 import io.vertx.ext.web.FileUpload;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.backbone.Filler;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 import io.vertx.up.unity.Ux;
 
 import java.util.HashSet;
@@ -33,7 +33,7 @@ public class FormFiller implements Filler {
              * Not file parameters ( Without uploading )
              */
             final String value = context.request().getFormAttribute(name);
-            return ZeroSerializer.getValue(paramType, value);
+            return ZeroType.value(paramType, value);
         } else {
             final ConcurrentMap<String, Set<FileUpload>> compressed
                 = Ux.toFile(uploadSet);
@@ -49,7 +49,7 @@ public class FormFiller implements Filler {
                  * Not file parameters ( With uploading )
                  */
                 final String value = context.request().getFormAttribute(name);
-                return ZeroSerializer.getValue(paramType, value);
+                return ZeroType.value(paramType, value);
             }
         }
     }

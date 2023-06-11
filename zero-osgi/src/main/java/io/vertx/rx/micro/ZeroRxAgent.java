@@ -14,7 +14,7 @@ import io.vertx.rxjava3.ext.web.Route;
 import io.vertx.rxjava3.ext.web.Router;
 import io.vertx.up.annotations.Agent;
 import io.vertx.up.eon.em.container.ServerType;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.text.MessageFormat;
@@ -44,7 +44,7 @@ public class ZeroRxAgent extends AbstractVerticle {
         // Fn.po?lThread(Pool.EVENTS, () -> Ut.instance(EventAxis.class));
 
         /* 3.Get the default HttpServer Options **/
-        ZeroOption.getRxOptions().forEach((port, option) -> {
+        Electy.optionRx().forEach((port, option) -> {
             /* 3.1.Single server processing **/
             final HttpServer server = this.vertx.createHttpServer(option);
             /* 3.2. Build router with current option **/
@@ -66,7 +66,7 @@ public class ZeroRxAgent extends AbstractVerticle {
     private void recordServer(final HttpServerOptions options,
                               final Router router) {
         final Integer port = options.getPort();
-        final AtomicInteger out = ZeroOption.ATOMIC_LOG.get(port);
+        final AtomicInteger out = Electy.serverLog().get(port);
         if (VValue.ZERO == out.getAndIncrement()) {
             // 1. Build logs for current server;
             final String portLiteral = String.valueOf(port);

@@ -1,4 +1,4 @@
-package io.vertx.up.runtime;
+package io.vertx.up.supply;
 
 import io.horizon.eon.VMessage;
 import io.horizon.eon.VValue;
@@ -17,19 +17,11 @@ import java.util.stream.Collectors;
  * Start up tools shared in
  * Web EmApp & Rx EmApp
  */
-public final class ZeroAgent {
+final class ZeroAgent {
 
     private static final Annal LOGGER = Annal.get(ZeroAgent.class);
 
-    /**
-     * Agent calculation
-     *
-     * @param defaultAgents default agent classes array
-     * @param internals     default internal agent class
-     *
-     * @return The map to stored agent class for each ServerType here
-     */
-    public static ConcurrentMap<ServerType, Class<?>> agentCommon(
+    static ConcurrentMap<ServerType, Class<?>> agentCommon(
         final ServerType category,
         final Class<?>[] defaultAgents,
         final ConcurrentMap<ServerType, Class<?>> internals
@@ -68,7 +60,7 @@ public final class ZeroAgent {
     private static ConcurrentMap<ServerType, Class<?>> agentFilter(
         final ConcurrentMap<ServerType, Class<?>> agents) {
         // Check Rpc Enabled
-        if (ZeroOption.getRpcOptions().isEmpty()) {
+        if (Electy.optionRpc().isEmpty()) {
             agents.remove(ServerType.IPC);
         } else {
             LOGGER.info(VMessage.Motor.RPC_ENABLED);
@@ -80,7 +72,7 @@ public final class ZeroAgent {
         final ServerType category,
         final ConcurrentMap<ServerType, Class<?>> internals
     ) {
-        final ConcurrentMap<ServerType, List<Class<?>>> agents = ZeroAnno.getAgents();
+        final ConcurrentMap<ServerType, List<Class<?>>> agents = Electy.clazzAgent();
         if (agents.isEmpty()) {
             // Inject ServerType by category input.
             agents.put(category, new ArrayList<>(internals.values()));

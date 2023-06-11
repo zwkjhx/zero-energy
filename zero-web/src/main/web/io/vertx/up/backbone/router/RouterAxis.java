@@ -1,6 +1,7 @@
 package io.vertx.up.backbone.router;
 
 import io.horizon.specification.boot.HAxis;
+import io.vertx.boot.configuration.BootStore;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.json.JsonArray;
@@ -10,7 +11,6 @@ import io.vertx.ext.web.impl.Origin;
 import io.vertx.ext.web.sstore.ClusteredSessionStore;
 import io.vertx.ext.web.sstore.LocalSessionStore;
 import io.vertx.ext.web.sstore.SessionStore;
-import io.vertx.up.configuration.BootStore;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.plugin.session.SessionClient;
 import io.vertx.up.plugin.session.SessionInfix;

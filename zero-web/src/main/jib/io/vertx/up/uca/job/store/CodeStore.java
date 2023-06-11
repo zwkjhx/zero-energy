@@ -2,7 +2,7 @@ package io.vertx.up.uca.job.store;
 
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 
 import java.util.Set;
 
@@ -10,7 +10,7 @@ import java.util.Set;
  * Bridge for different JobStore
  */
 class CodeStore implements JobReader {
-    private static final Set<Mission> MISSIONS = ZeroAnno.getJobs();
+    private static final Set<Mission> MISSIONS = Electy.ucaJob();
 
     @Override
     public Set<Mission> fetch() {

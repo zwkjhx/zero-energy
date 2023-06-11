@@ -1,4 +1,4 @@
-package io.vertx.up.bang;
+package io.vertx.boot.launcher;
 
 import io.horizon.eon.VMessage;
 import io.horizon.specification.boot.HLauncher;
@@ -14,7 +14,7 @@ import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.spi.cluster.ClusterManager;
 import io.vertx.up.boot.options.VertxSetUp;
 import io.vertx.up.commune.Envelop;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
@@ -50,8 +50,8 @@ public class ZeroLauncher implements HLauncher<Vertx> {
     @Override
     public <T extends HConfig> void start(final HOn<T> on, final Consumer<Vertx> server) {
         // 直接提取参数查看是否集群模式
-        final ClusterOptions clusterOptions = ZeroOption.getClusterOption();
-        final ConcurrentMap<String, VertxOptions> vertxOptions = ZeroOption.getVertxOptions();
+        final ClusterOptions clusterOptions = Electy.optionCluster();
+        final ConcurrentMap<String, VertxOptions> vertxOptions = Electy.optionVertx();
         if (clusterOptions.isEnabled()) {
             // 集群模式
             final ClusterManager manager = clusterOptions.getManager();

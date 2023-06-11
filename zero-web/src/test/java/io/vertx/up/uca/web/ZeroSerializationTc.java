@@ -4,7 +4,7 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.quiz.ZeroBase;
 import io.vertx.up.exception.web._400ParameterFromStringException;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -18,7 +18,7 @@ public class ZeroSerializationTc extends ZeroBase {
 
     @SuppressWarnings("unchecked")
     private <T> T get(final Class<?> clazz, final String literal) {
-        final T value = (T) ZeroSerializer.getValue(clazz, literal);
+        final T value = (T) ZeroType.value(clazz, literal);
         this.logger().info("[TEST] Data = {0}, Type = {1}.", value, clazz.getName());
         return value;
     }

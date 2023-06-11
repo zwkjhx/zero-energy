@@ -6,7 +6,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Session;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 import io.vertx.up.unity.Ux;
 import io.vertx.up.util.Ut;
 import io.vertx.zero.exception.AsyncSignatureException;
@@ -119,7 +119,7 @@ public class InvokerUtil {
             value = envelop.session();
         } else {
             value = defaultSupplier.get();
-            final Object argument = null == value ? null : ZeroSerializer.getValue(type, value.toString());
+            final Object argument = null == value ? null : ZeroType.value(type, value.toString());
         }
         return value;
     }
@@ -186,7 +186,7 @@ public class InvokerUtil {
                     /*
                      * Serialization
                      */
-                    arguments[idx] = ZeroSerializer.getValue(type, value.toString());
+                    arguments[idx] = ZeroType.value(type, value.toString());
                 }
             } else {
                 /*
@@ -222,7 +222,7 @@ public class InvokerUtil {
                     }
                 }
             }
-            final Object arguments = ZeroSerializer.getValue(argType, Ut.toString(parameters));
+            final Object arguments = ZeroType.value(argType, Ut.toString(parameters));
             return invoke(proxy, method, arguments); // Ut.invoke(proxy, method.getName(), arguments);
         } else {
             /*

@@ -1,12 +1,12 @@
-package io.vertx.up.lightway;
+package io.vertx.boot.lighter;
 
 import io.macrocosm.specification.app.HPre;
 import io.macrocosm.specification.config.HConfig;
 import io.macrocosm.specification.program.HArk;
+import io.vertx.boot.configuration.BootStore;
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
-import io.vertx.up.configuration.BootStore;
 import io.vertx.up.plugin.jooq.JooqInfix;
 import io.vertx.up.plugin.shared.MapInfix;
 import io.vertx.up.unity.Ux;
@@ -16,7 +16,7 @@ import java.util.Set;
 /**
  * @author lang : 2023-06-10
  */
-public class WebPre implements HPre<Vertx> {
+public class PreWeb implements HPre<Vertx> {
 
 
     /**

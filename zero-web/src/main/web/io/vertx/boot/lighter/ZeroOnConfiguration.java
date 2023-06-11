@@ -1,4 +1,4 @@
-package io.vertx.up.lightway;
+package io.vertx.boot.lighter;
 
 import io.macrocosm.specification.app.HPre;
 import io.modello.atom.app.KConfig;

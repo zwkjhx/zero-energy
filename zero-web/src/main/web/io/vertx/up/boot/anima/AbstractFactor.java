@@ -2,11 +2,11 @@ package io.vertx.up.boot.anima;
 
 import io.horizon.uca.log.Annal;
 import io.macrocosm.specification.config.HConfig;
-import io.vertx.up.configuration.BootStore;
+import io.vertx.boot.configuration.BootStore;
 import io.vertx.up.eon.em.container.ServerType;
 import io.vertx.up.exception.boot.RpcPreparingException;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroAgent;
+import io.vertx.up.supply.Electy;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,7 +20,7 @@ public abstract class AbstractFactor implements Factor {
         /* 1.Find Agent for deploy **/
         final ConcurrentMap<ServerType, Class<?>> agentMap = this.internals();
         final ConcurrentMap<ServerType, Class<?>> agents
-            = ZeroAgent.agentCommon(ServerType.HTTP, this.defaults(), agentMap);
+            = Electy.clazzAgent(ServerType.HTTP, this.defaults(), agentMap);
         if (agents.containsKey(ServerType.IPC)) {
             // 2. Check etcd server status, IPC Only
             final BootStore config = (BootStore) hConfig;

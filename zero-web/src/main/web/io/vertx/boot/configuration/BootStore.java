@@ -1,4 +1,4 @@
-package io.vertx.up.configuration;
+package io.vertx.boot.configuration;
 
 import io.horizon.eon.em.EmApp;
 import io.horizon.uca.log.Annal;

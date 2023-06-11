@@ -7,7 +7,7 @@ import io.vertx.up.atom.worker.Receipt;
 import io.vertx.up.eon.KName;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.runtime.Anno;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 import io.vertx.zero.exception.AddressWrongException;
 
@@ -29,7 +29,7 @@ public class AeonBridge {
 
     static {
         /* 1. Get all endpoints **/
-        final Set<Class<?>> endpoints = ZeroAnno.getEndpoints();
+        final Set<Class<?>> endpoints = Electy.clazzEndPoint();
 
         /* 2. Scan for @Address to matching **/
         Observable.fromIterable(endpoints)
@@ -60,7 +60,7 @@ public class AeonBridge {
             AddressWrongException.class,
             AeonBridge.class, address, clazz, method);
 
-        final Method replaced = ZeroAnno.getQaS(address);
+        final Method replaced = Electy.getQaS(address);
         final Receipt receipt = new Receipt();
         receipt.setAddress(address);
         if (Objects.isNull(replaced)) {

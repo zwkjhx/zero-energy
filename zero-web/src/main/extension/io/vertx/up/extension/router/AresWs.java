@@ -10,8 +10,7 @@ import io.vertx.up.extension.AbstractAres;
 import io.vertx.up.extension.Ares;
 import io.vertx.up.extension.router.websocket.AresBridge;
 import io.vertx.up.extension.router.websocket.AresSockJs;
-import io.vertx.up.runtime.ZeroAnno;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;
@@ -24,8 +23,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 class AresWs extends AbstractAres {
 
 
-    private static final Set<Remind> SOCKS = ZeroAnno.getSocks();
-    private static final boolean ENABLED = !ZeroOption.getSockOptions().isEmpty() && !SOCKS.isEmpty();
+    private static final Set<Remind> SOCKS = Electy.ucaWebSocket();
+    private static final boolean ENABLED = !Electy.optionSock().isEmpty() && !SOCKS.isEmpty();
     // Single Log Needed
     private static final AtomicBoolean LOG_DISABLED = new AtomicBoolean(Boolean.TRUE);
     private static final AtomicBoolean LOG_PUBLISH = new AtomicBoolean(Boolean.TRUE);
@@ -44,7 +43,7 @@ class AresWs extends AbstractAres {
         if (ENABLED) {
             super.configure(options);
             // Pre-Configuration of HttpServerOptions for specific usage
-            this.sockOptions = ZeroOption.getSockOptions().getOrDefault(options.getPort(), null);
+            this.sockOptions = Electy.optionSock().getOrDefault(options.getPort(), null);
             if (Objects.nonNull(this.sockOptions)) {
                 final String publish = this.sockOptions.getPublish();
                 if (Ut.isNotNil(publish)) {

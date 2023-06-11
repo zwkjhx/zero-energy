@@ -4,7 +4,7 @@ import io.macrocosm.specification.config.HConfig;
 import io.vertx.rx.micro.ZeroRxAgent;
 import io.vertx.up.boot.anima.Factor;
 import io.vertx.up.eon.em.container.ServerType;
-import io.vertx.up.runtime.ZeroAgent;
+import io.vertx.up.supply.Electy;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -33,7 +33,7 @@ public class RxFactor implements Factor {
     public ConcurrentMap<ServerType, Class<?>> endpoint(final HConfig config) {
         /* 1.Find Agent for deploy **/
         final ConcurrentMap<ServerType, Class<?>> agents
-            = ZeroAgent.agentCommon(ServerType.RX, DEFAULT_AGENTS, INTERNALS);
+            = Electy.clazzAgent(ServerType.RX, DEFAULT_AGENTS, INTERNALS);
         // 3. Filter invalid agents
         final Set<ServerType> scanned = new HashSet<>(agents.keySet());
         final Set<ServerType> keeped = INTERNALS.keySet();

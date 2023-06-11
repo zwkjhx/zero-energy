@@ -3,7 +3,7 @@ package io.vertx.up.unity;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.ext.web.FileUpload;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 
 import java.io.File;
 import java.util.*;
@@ -184,7 +184,7 @@ class Upload {
             /*
              * File ( class )
              */
-            return (T) ZeroSerializer.getValue(expected, filename);
+            return (T) ZeroType.value(expected, filename);
         } else if (expected.isArray()) {
             /*
              * T[]

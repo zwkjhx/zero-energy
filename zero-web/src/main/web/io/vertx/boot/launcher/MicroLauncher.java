@@ -1,12 +1,12 @@
-package io.vertx.up.bang;
+package io.vertx.boot.launcher;
 
 import io.horizon.specification.boot.HLauncher;
 import io.macrocosm.specification.boot.HOff;
 import io.macrocosm.specification.boot.HOn;
 import io.macrocosm.specification.config.HBoot;
 import io.macrocosm.specification.config.HConfig;
+import io.vertx.boot.configuration.BootStore;
 import io.vertx.core.Vertx;
-import io.vertx.up.configuration.BootStore;
 import io.vertx.up.exception.boot.RpcPreparingException;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.uca.registry.UddiRegistry;

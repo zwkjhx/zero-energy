@@ -58,34 +58,34 @@
 2023-06-07 13:44:41,265 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 12,345, Type = short. 
 2023-06-07 13:44:41,269 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 12,345, Type = java.lang.Short. 
 2023-06-07 13:44:41,273 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 1234, Type = java.lang.String. 
-2023-06-07 13:44:41,278 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2}, Type = java.lang.Integer. 
-2023-06-07 13:44:41,282 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello"]}, Type = java.util.HashSet. 
-2023-06-07 13:44:41,285 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"AAAAAAAAAAAAAAAAAAAAAA"}, Type = [B. 
-2023-06-07 13:44:41,288 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686116681287}, Type = java.util.GregorianCalendar. 
-2023-06-07 13:44:41,291 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07"}, Type = java.time.LocalDate. 
-2023-06-07 13:44:41,291 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"13:44:41.291464"}, Type = java.time.LocalTime. 
-2023-06-07 13:44:41,292 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07T13:44:41.291845"}, Type = java.time.LocalDateTime. 
-2023-06-07 13:44:41,294 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":22}, Type = java.lang.Long. 
-2023-06-07 13:44:41,300 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"},null]}, Type = [Lio.vertx.up.uca.web.User;. 
-2023-06-07 13:44:41,303 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686116681303}, Type = java.util.Date. 
-2023-06-07 13:44:41,306 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"STRING"}, Type = io.vertx.up.uca.web.KTest. 
-2023-06-07 13:44:41,310 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Integer. 
-2023-06-07 13:44:41,312 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Long. 
-2023-06-07 13:44:41,314 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = null. 
-2023-06-07 13:44:41,317 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = io.vertx.up.uca.web.User. 
-2023-06-07 13:44:41,320 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"}]}, Type = java.util.ArrayList. 
-2023-06-07 13:44:41,324 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float. 
-2023-06-07 13:44:41,325 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.44}, Type = java.math.BigDecimal. 
-2023-06-07 13:44:41,328 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"Buffer"}, Type = java.lang.StringBuffer. 
-2023-06-07 13:44:41,330 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.33}, Type = java.lang.Double. 
-2023-06-07 13:44:41,333 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float. 
-2023-06-07 13:44:41,336 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello","Lang"]}, Type = [Ljava.lang.String;. 
+2023-06-07 13:44:41,278 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2}, Type = java.lang.Integer.
+2023-06-07 13:44:41,282 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello"]}, Type = java.util.HashSet.
+2023-06-07 13:44:41,285 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"AAAAAAAAAAAAAAAAAAAAAA"}, Type = [B.
+2023-06-07 13:44:41,288 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686116681287}, Type = java.util.GregorianCalendar.
+2023-06-07 13:44:41,291 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07"}, Type = java.time.LocalDate.
+2023-06-07 13:44:41,291 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"13:44:41.291464"}, Type = java.time.LocalTime.
+2023-06-07 13:44:41,292 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07T13:44:41.291845"}, Type = java.time.LocalDateTime.
+2023-06-07 13:44:41,294 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":22}, Type = java.lang.Long.
+2023-06-07 13:44:41,300 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"},null]}, Type = [Lio.vertx.up.uca.web.User;.
+2023-06-07 13:44:41,303 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686116681303}, Type = java.util.Date.
+2023-06-07 13:44:41,306 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"STRING"}, Type = io.vertx.up.uca.web.KTest.
+2023-06-07 13:44:41,310 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Integer.
+2023-06-07 13:44:41,312 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Long.
+2023-06-07 13:44:41,314 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = null.
+2023-06-07 13:44:41,317 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = io.vertx.up.uca.web.User.
+2023-06-07 13:44:41,320 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"}]}, Type = java.util.ArrayList.
+2023-06-07 13:44:41,324 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float.
+2023-06-07 13:44:41,325 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.44}, Type = java.math.BigDecimal.
+2023-06-07 13:44:41,328 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"Buffer"}, Type = java.lang.StringBuffer.
+2023-06-07 13:44:41,330 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.33}, Type = java.lang.Double.
+2023-06-07 13:44:41,333 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float.
+2023-06-07 13:44:41,336 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello","Lang"]}, Type = [Ljava.lang.String;.
 2023-06-07 13:44:41,342 [INFO ] | main | io.vertx.up.uca.serialization.BufferSaberTc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.uca.serialization/data 
 2023-06-07 13:44:41,404 [INFO ] | main | io.vertx.up.runtime.ZeroPack | [1;30m[ μηδέν ] [mIgnored packages: [ "android.annotation", "aj.org.objectweb", "camundajar", "camundafeel", "cglib", "ch.qos.logback", "co.paralleluniverse", "connectjar", "com.aliyun", "com.carrotsearch", "com.eclipsesource", "com.esotericsoftware", "com.fasterxml", "com.github", "com.google", "com.graphbuilder", "com.hazelcast", "com.hp", "com.intellij", "com.jcraft.jzlib", "com.microfocus", "com.microsoft", "com.mysql", "com.netflix", "com.oracle", "com.sun", "com.tdunning", "com.zaxxer", "com.codahale", "de.javakaffee", "de.odysseus", "examples", "fastparse", "geny", "io.github", "io.github.jklingsporn", "io.grpc", "io.micrometer", "io.netty", "io.opentracing", "io.prometheus", "io.perfmark", "io.reactivex", "io.r2dbc", "io.termd", "io.vertx.codegen", "io.vertx.config", "io.vertx.core", "io.vertx.ext", "io.vertx.lang", "io.vertx.spi", "io.vertx.zero", "io.zero", "jakarta", "joptsimple", "java", "java.util.concurrent", "javassist", "javax", "jdk", "junit", "kotlin", "me.escofflier", "mousio", "net", "oracle", "org.HdrHistogram", "org.aopalliance", "org.aspectj", "org.apache", "org.camunda", "org.checkerframework", "org.cliffc", "org.conscrypt", "org.codehaus", "org.eclipse", "org.elasticsearch", "org.etsi", "org.glassfish", "org.hamcrest", "org.hibernate", "org.intellij", "org.infinispan", "org.jboss", "org.jetbrains", "org.jgroups", "org.joda", "org.jooq", "org.json", "org.junit", "org.jvnet", "org.mvel2", "org.neo4j", "org.objenesis", "org.objectweb", "org.openxmlformats", "org.osgi", "org.reactivestreams", "org.reflections", "org.slf4j", "org.tartarus", "org.w3c", "org.w3", "org.wildfly", "org.xml", "org.yaml", "protostream", "picocli", "redis", "scala", "sourcecode", "schemaorg_apache_xmlbeans", "sun", "META-INF" ], please check whether contains yours 
 2023-06-07 13:44:41,638 [INFO ] | main | io.vertx.up.runtime.ZeroPack | [1;30m[ μηδέν ] [mZero system scanned `750` classes in total. 
 2023-06-07 13:44:41,638 [INFO ] | main | io.vertx.up.boot.origin.GuiceInquirer | [1;30m[ μηδέν ] [m[ DI ] The DI environment will be initialized! Total = `750` 
 2023-06-07 13:44:41,647 [INFO ] | main | io.vertx.up.boot.origin.GuiceInquirer | [1;30m[ μηδέν ] [m[ DI ] 1st scanned, field = 0, method = 0, constructor = 0 
-2023-06-07 13:44:41,690 [INFO ] | main | io.vertx.up.runtime.ZeroAnno | [1;30m[ μηδέν ] [mZero Zone DI Environment.... Size= 750 
+2023-06-07 13:44:41,690 [INFO ] | main | io.vertx.up.supply.ZeroAnno | [1;30m[ μηδέν ] [mZero Zone DI Environment.... Size= 750
 2023-06-07 13:44:41,693 [WARN ] | main | io.vertx.up.boot.origin.WallInquirer | [ ERR-40038 ] ( WallInquirer ) Booting Error: (Security) Zero system detected duplicated "Wall" classes [io.vertx.quiz.example.WallKeeper2,io.vertx.quiz.example.WallKeeper3,io.vertx.quiz.example.WallKeeper1] (Path & Order) should not be the same, it's invalid 
 2023-06-07 13:57:37,373 [INFO ] | main | io.vertx.up.unity.D10047Tc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.unity/d10047.json 
 2023-06-07 13:57:37,408 [INFO ] | main | io.vertx.up.unity.D10047Tc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.unity/d10047.json 
@@ -147,34 +147,34 @@
 2023-06-07 13:57:37,781 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 12,345, Type = short. 
 2023-06-07 13:57:37,785 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 12,345, Type = java.lang.Short. 
 2023-06-07 13:57:37,788 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 1234, Type = java.lang.String. 
-2023-06-07 13:57:37,791 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2}, Type = java.lang.Integer. 
-2023-06-07 13:57:37,795 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello"]}, Type = java.util.HashSet. 
-2023-06-07 13:57:37,798 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"AAAAAAAAAAAAAAAAAAAAAA"}, Type = [B. 
-2023-06-07 13:57:37,801 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686117457800}, Type = java.util.GregorianCalendar. 
-2023-06-07 13:57:37,803 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07"}, Type = java.time.LocalDate. 
-2023-06-07 13:57:37,804 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"13:57:37.803955"}, Type = java.time.LocalTime. 
-2023-06-07 13:57:37,804 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07T13:57:37.804118"}, Type = java.time.LocalDateTime. 
-2023-06-07 13:57:37,806 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":22}, Type = java.lang.Long. 
-2023-06-07 13:57:37,811 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"},null]}, Type = [Lio.vertx.up.uca.web.User;. 
-2023-06-07 13:57:37,814 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686117457814}, Type = java.util.Date. 
-2023-06-07 13:57:37,817 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"STRING"}, Type = io.vertx.up.uca.web.KTest. 
-2023-06-07 13:57:37,821 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Integer. 
-2023-06-07 13:57:37,823 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Long. 
-2023-06-07 13:57:37,826 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = null. 
-2023-06-07 13:57:37,828 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = io.vertx.up.uca.web.User. 
-2023-06-07 13:57:37,831 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"}]}, Type = java.util.ArrayList. 
-2023-06-07 13:57:37,835 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float. 
-2023-06-07 13:57:37,835 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.44}, Type = java.math.BigDecimal. 
-2023-06-07 13:57:37,839 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"Buffer"}, Type = java.lang.StringBuffer. 
-2023-06-07 13:57:37,841 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.33}, Type = java.lang.Double. 
-2023-06-07 13:57:37,844 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float. 
-2023-06-07 13:57:37,847 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello","Lang"]}, Type = [Ljava.lang.String;. 
+2023-06-07 13:57:37,791 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2}, Type = java.lang.Integer.
+2023-06-07 13:57:37,795 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello"]}, Type = java.util.HashSet.
+2023-06-07 13:57:37,798 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"AAAAAAAAAAAAAAAAAAAAAA"}, Type = [B.
+2023-06-07 13:57:37,801 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686117457800}, Type = java.util.GregorianCalendar.
+2023-06-07 13:57:37,803 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07"}, Type = java.time.LocalDate.
+2023-06-07 13:57:37,804 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"13:57:37.803955"}, Type = java.time.LocalTime.
+2023-06-07 13:57:37,804 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07T13:57:37.804118"}, Type = java.time.LocalDateTime.
+2023-06-07 13:57:37,806 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":22}, Type = java.lang.Long.
+2023-06-07 13:57:37,811 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"},null]}, Type = [Lio.vertx.up.uca.web.User;.
+2023-06-07 13:57:37,814 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686117457814}, Type = java.util.Date.
+2023-06-07 13:57:37,817 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"STRING"}, Type = io.vertx.up.uca.web.KTest.
+2023-06-07 13:57:37,821 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Integer.
+2023-06-07 13:57:37,823 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Long.
+2023-06-07 13:57:37,826 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = null.
+2023-06-07 13:57:37,828 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = io.vertx.up.uca.web.User.
+2023-06-07 13:57:37,831 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"}]}, Type = java.util.ArrayList.
+2023-06-07 13:57:37,835 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float.
+2023-06-07 13:57:37,835 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.44}, Type = java.math.BigDecimal.
+2023-06-07 13:57:37,839 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"Buffer"}, Type = java.lang.StringBuffer.
+2023-06-07 13:57:37,841 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.33}, Type = java.lang.Double.
+2023-06-07 13:57:37,844 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float.
+2023-06-07 13:57:37,847 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello","Lang"]}, Type = [Ljava.lang.String;.
 2023-06-07 13:57:37,853 [INFO ] | main | io.vertx.up.uca.serialization.BufferSaberTc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.uca.serialization/data 
 2023-06-07 13:57:37,915 [INFO ] | main | io.vertx.up.runtime.ZeroPack | [1;30m[ μηδέν ] [mIgnored packages: [ "android.annotation", "aj.org.objectweb", "camundajar", "camundafeel", "cglib", "ch.qos.logback", "co.paralleluniverse", "connectjar", "com.aliyun", "com.carrotsearch", "com.eclipsesource", "com.esotericsoftware", "com.fasterxml", "com.github", "com.google", "com.graphbuilder", "com.hazelcast", "com.hp", "com.intellij", "com.jcraft.jzlib", "com.microfocus", "com.microsoft", "com.mysql", "com.netflix", "com.oracle", "com.sun", "com.tdunning", "com.zaxxer", "com.codahale", "de.javakaffee", "de.odysseus", "examples", "fastparse", "geny", "io.github", "io.github.jklingsporn", "io.grpc", "io.micrometer", "io.netty", "io.opentracing", "io.prometheus", "io.perfmark", "io.reactivex", "io.r2dbc", "io.termd", "io.vertx.codegen", "io.vertx.config", "io.vertx.core", "io.vertx.ext", "io.vertx.lang", "io.vertx.spi", "io.vertx.zero", "io.zero", "jakarta", "joptsimple", "java", "java.util.concurrent", "javassist", "javax", "jdk", "junit", "kotlin", "me.escofflier", "mousio", "net", "oracle", "org.HdrHistogram", "org.aopalliance", "org.aspectj", "org.apache", "org.camunda", "org.checkerframework", "org.cliffc", "org.conscrypt", "org.codehaus", "org.eclipse", "org.elasticsearch", "org.etsi", "org.glassfish", "org.hamcrest", "org.hibernate", "org.intellij", "org.infinispan", "org.jboss", "org.jetbrains", "org.jgroups", "org.joda", "org.jooq", "org.json", "org.junit", "org.jvnet", "org.mvel2", "org.neo4j", "org.objenesis", "org.objectweb", "org.openxmlformats", "org.osgi", "org.reactivestreams", "org.reflections", "org.slf4j", "org.tartarus", "org.w3c", "org.w3", "org.wildfly", "org.xml", "org.yaml", "protostream", "picocli", "redis", "scala", "sourcecode", "schemaorg_apache_xmlbeans", "sun", "META-INF" ], please check whether contains yours 
 2023-06-07 13:57:38,182 [INFO ] | main | io.vertx.up.runtime.ZeroPack | [1;30m[ μηδέν ] [mZero system scanned `750` classes in total. 
 2023-06-07 13:57:38,182 [INFO ] | main | io.vertx.up.boot.origin.GuiceInquirer | [1;30m[ μηδέν ] [m[ DI ] The DI environment will be initialized! Total = `750` 
 2023-06-07 13:57:38,191 [INFO ] | main | io.vertx.up.boot.origin.GuiceInquirer | [1;30m[ μηδέν ] [m[ DI ] 1st scanned, field = 0, method = 0, constructor = 0 
-2023-06-07 13:57:38,239 [INFO ] | main | io.vertx.up.runtime.ZeroAnno | [1;30m[ μηδέν ] [mZero Zone DI Environment.... Size= 750 
+2023-06-07 13:57:38,239 [INFO ] | main | io.vertx.up.supply.ZeroAnno | [1;30m[ μηδέν ] [mZero Zone DI Environment.... Size= 750
 2023-06-07 13:57:38,241 [WARN ] | main | io.vertx.up.boot.origin.WallInquirer | [ ERR-40038 ] ( WallInquirer ) Booting Error: (Security) Zero system detected duplicated "Wall" classes [io.vertx.quiz.example.WallKeeper2,io.vertx.quiz.example.WallKeeper3,io.vertx.quiz.example.WallKeeper1] (Path & Order) should not be the same, it's invalid 
 2023-06-07 14:23:26,148 [INFO ] | main | io.vertx.up.unity.D10047Tc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.unity/d10047.json 
 2023-06-07 14:23:26,186 [INFO ] | main | io.vertx.up.unity.D10047Tc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.unity/d10047.json 
@@ -236,32 +236,32 @@
 2023-06-07 14:23:26,561 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 12,345, Type = short. 
 2023-06-07 14:23:26,565 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 12,345, Type = java.lang.Short. 
 2023-06-07 14:23:26,569 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializationTc | [1;30m[ μηδέν ] [m[TEST] Data = 1234, Type = java.lang.String. 
-2023-06-07 14:23:26,573 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2}, Type = java.lang.Integer. 
-2023-06-07 14:23:26,577 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello"]}, Type = java.util.HashSet. 
-2023-06-07 14:23:26,580 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"AAAAAAAAAAAAAAAAAAAAAA"}, Type = [B. 
-2023-06-07 14:23:26,582 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686119006582}, Type = java.util.GregorianCalendar. 
-2023-06-07 14:23:26,585 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07"}, Type = java.time.LocalDate. 
-2023-06-07 14:23:26,585 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"14:23:26.585431"}, Type = java.time.LocalTime. 
-2023-06-07 14:23:26,585 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07T14:23:26.585592"}, Type = java.time.LocalDateTime. 
-2023-06-07 14:23:26,587 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":22}, Type = java.lang.Long. 
-2023-06-07 14:23:26,595 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"},null]}, Type = [Lio.vertx.up.uca.web.User;. 
-2023-06-07 14:23:26,598 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686119006598}, Type = java.util.Date. 
-2023-06-07 14:23:26,601 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"STRING"}, Type = io.vertx.up.uca.web.KTest. 
-2023-06-07 14:23:26,604 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Integer. 
-2023-06-07 14:23:26,606 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Long. 
-2023-06-07 14:23:26,608 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = null. 
-2023-06-07 14:23:26,611 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = io.vertx.up.uca.web.User. 
-2023-06-07 14:23:26,614 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"}]}, Type = java.util.ArrayList. 
-2023-06-07 14:23:26,617 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float. 
-2023-06-07 14:23:26,618 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.44}, Type = java.math.BigDecimal. 
-2023-06-07 14:23:26,621 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"Buffer"}, Type = java.lang.StringBuffer. 
-2023-06-07 14:23:26,623 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.33}, Type = java.lang.Double. 
-2023-06-07 14:23:26,626 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float. 
-2023-06-07 14:23:26,630 [INFO ] | main | io.vertx.up.uca.web.ZeroSerializerTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello","Lang"]}, Type = [Ljava.lang.String;. 
+2023-06-07 14:23:26,573 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2}, Type = java.lang.Integer.
+2023-06-07 14:23:26,577 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello"]}, Type = java.util.HashSet.
+2023-06-07 14:23:26,580 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"AAAAAAAAAAAAAAAAAAAAAA"}, Type = [B.
+2023-06-07 14:23:26,582 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686119006582}, Type = java.util.GregorianCalendar.
+2023-06-07 14:23:26,585 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07"}, Type = java.time.LocalDate.
+2023-06-07 14:23:26,585 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"14:23:26.585431"}, Type = java.time.LocalTime.
+2023-06-07 14:23:26,585 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"2023-06-07T14:23:26.585592"}, Type = java.time.LocalDateTime.
+2023-06-07 14:23:26,587 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":22}, Type = java.lang.Long.
+2023-06-07 14:23:26,595 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"},null]}, Type = [Lio.vertx.up.uca.web.User;.
+2023-06-07 14:23:26,598 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":1686119006598}, Type = java.util.Date.
+2023-06-07 14:23:26,601 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"STRING"}, Type = io.vertx.up.uca.web.KTest.
+2023-06-07 14:23:26,604 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Integer.
+2023-06-07 14:23:26,606 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3}, Type = java.lang.Long.
+2023-06-07 14:23:26,608 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = null.
+2023-06-07 14:23:26,611 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":null}, Type = io.vertx.up.uca.web.User.
+2023-06-07 14:23:26,614 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":[{"name":"Lang","email":"silentbalanceyh@126.com"}]}, Type = java.util.ArrayList.
+2023-06-07 14:23:26,617 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float.
+2023-06-07 14:23:26,618 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.44}, Type = java.math.BigDecimal.
+2023-06-07 14:23:26,621 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":"Buffer"}, Type = java.lang.StringBuffer.
+2023-06-07 14:23:26,623 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":2.33}, Type = java.lang.Double.
+2023-06-07 14:23:26,626 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":3.33}, Type = java.lang.Float.
+2023-06-07 14:23:26,630 [INFO ] | main | io.vertx.up.uca.web.ZeroTypeTc | [1;30m[ μηδέν ] [m[TEST] Data = {"request":["Hello","Lang"]}, Type = [Ljava.lang.String;.
 2023-06-07 14:23:26,636 [INFO ] | main | io.vertx.up.uca.serialization.BufferSaberTc | [1;30m[ μηδέν ] [m[ Tc ] Test input file reading from: test/io.vertx.up.uca.serialization/data 
 2023-06-07 14:23:26,699 [INFO ] | main | io.vertx.up.runtime.ZeroPack | [1;30m[ μηδέν ] [mIgnored packages: [ "android.annotation", "aj.org.objectweb", "camundajar", "camundafeel", "cglib", "ch.qos.logback", "co.paralleluniverse", "connectjar", "com.aliyun", "com.carrotsearch", "com.eclipsesource", "com.esotericsoftware", "com.fasterxml", "com.github", "com.google", "com.graphbuilder", "com.hazelcast", "com.hp", "com.intellij", "com.jcraft.jzlib", "com.microfocus", "com.microsoft", "com.mysql", "com.netflix", "com.oracle", "com.sun", "com.tdunning", "com.zaxxer", "com.codahale", "de.javakaffee", "de.odysseus", "examples", "fastparse", "geny", "io.github", "io.github.jklingsporn", "io.grpc", "io.micrometer", "io.netty", "io.opentracing", "io.prometheus", "io.perfmark", "io.reactivex", "io.r2dbc", "io.termd", "io.vertx.codegen", "io.vertx.config", "io.vertx.core", "io.vertx.ext", "io.vertx.lang", "io.vertx.spi", "io.vertx.zero", "io.zero", "jakarta", "joptsimple", "java", "java.util.concurrent", "javassist", "javax", "jdk", "junit", "kotlin", "me.escofflier", "mousio", "net", "oracle", "org.HdrHistogram", "org.aopalliance", "org.aspectj", "org.apache", "org.camunda", "org.checkerframework", "org.cliffc", "org.conscrypt", "org.codehaus", "org.eclipse", "org.elasticsearch", "org.etsi", "org.glassfish", "org.hamcrest", "org.hibernate", "org.intellij", "org.infinispan", "org.jboss", "org.jetbrains", "org.jgroups", "org.joda", "org.jooq", "org.json", "org.junit", "org.jvnet", "org.mvel2", "org.neo4j", "org.objenesis", "org.objectweb", "org.openxmlformats", "org.osgi", "org.reactivestreams", "org.reflections", "org.slf4j", "org.tartarus", "org.w3c", "org.w3", "org.wildfly", "org.xml", "org.yaml", "protostream", "picocli", "redis", "scala", "sourcecode", "schemaorg_apache_xmlbeans", "sun", "META-INF" ], please check whether contains yours 
 2023-06-07 14:23:26,941 [INFO ] | main | io.vertx.up.runtime.ZeroPack | [1;30m[ μηδέν ] [mZero system scanned `750` classes in total. 
 2023-06-07 14:23:26,941 [INFO ] | main | io.vertx.up.boot.origin.GuiceInquirer | [1;30m[ μηδέν ] [m[ DI ] The DI environment will be initialized! Total = `750` 
 2023-06-07 14:23:26,950 [INFO ] | main | io.vertx.up.boot.origin.GuiceInquirer | [1;30m[ μηδέν ] [m[ DI ] 1st scanned, field = 0, method = 0, constructor = 0 
-2023-06-07 14:23:26,997 [INFO ] | main | io.vertx.up.runtime.ZeroAnno | [1;30m[ μηδέν ] [mZero Zone DI Environment.... Size= 750 
+2023-06-07 14:23:26,997 [INFO ] | main | io.vertx.up.supply.ZeroAnno | [1;30m[ μηδέν ] [mZero Zone DI Environment.... Size= 750
 2023-06-07 14:23:26,999 [WARN ] | main | io.vertx.up.boot.origin.WallInquirer | [ ERR-40038 ] ( WallInquirer ) Booting Error: (Security) Zero system detected duplicated "Wall" classes [io.vertx.quiz.example.WallKeeper2,io.vertx.quiz.example.WallKeeper3,io.vertx.quiz.example.WallKeeper1] (Path & Order) should not be the same, it's invalid 

@@ -11,7 +11,7 @@ import io.vertx.up.atom.container.VInstance;
 import io.vertx.up.backbone.Aim;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.unity.Ux;
 
 import java.util.Objects;
@@ -52,7 +52,7 @@ public class AsyncAim extends BaseAim implements Aim<RoutingContext> {
                      * - In Sync, not need to pass Envelop on event bus
                      */
                     final Envelop request = dataRes.result();
-                    bus.<Envelop>request(address, request, ZeroOption.getDeliveryOption(), handler -> {
+                    bus.<Envelop>request(address, request, Electy.optionDelivery(), handler -> {
                         final Envelop response;
                         if (handler.succeeded()) {
                             // Request - Response message

@@ -11,7 +11,7 @@ import io.vertx.up.backbone.Aim;
 import io.vertx.up.backbone.hunt.AsyncAim;
 import io.vertx.up.backbone.hunt.OneWayAim;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 import io.vertx.zero.exception.ReturnTypeException;
 import io.vertx.zero.exception.WorkerMissingException;
@@ -30,7 +30,7 @@ class EventDiffer implements Differ<RoutingContext> {
 
     private static final Annal LOGGER = Annal.get(EventDiffer.class);
 
-    private static final Set<Receipt> RECEIPTS = ZeroAnno.getReceipts();
+    private static final Set<Receipt> RECEIPTS = Electy.ucaReceipt();
 
     private EventDiffer() {
     }

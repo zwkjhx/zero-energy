@@ -1,7 +1,7 @@
 package io.vertx.up.unity;
 
+import io.vertx.boot.launcher.ZeroLauncher;
 import io.vertx.core.*;
-import io.vertx.up.bang.ZeroLauncher;
 
 import java.util.concurrent.TimeUnit;
 

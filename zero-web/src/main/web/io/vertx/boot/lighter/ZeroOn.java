@@ -1,14 +1,14 @@
-package io.vertx.up.lightway;
+package io.vertx.boot.lighter;
 
 import io.macrocosm.specification.boot.HOn;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 
 import java.util.Objects;
 
 /**
  * 配置初始化流程
  * <pre><code>
- *     1. 环境初始化，执行 {@link ZeroAnno#configure()} 方法
+ *     1. 环境初始化，执行 {@link Electy#initialize()} 方法
  *     2. 填充功能表
  *        - shared
  *        - session
@@ -49,7 +49,7 @@ public class ZeroOn implements HOn<ZeroOnConfiguration> {
     @Override
     public Boolean configure(final ZeroOnConfiguration config) {
         // 1. 环境初始化
-        ZeroAnno.configure();
+        Electy.initialize();
         // 2. 扫描环境之后才可以拿到 Injections
         INSTANCE = config;
         // 3. 装配完成

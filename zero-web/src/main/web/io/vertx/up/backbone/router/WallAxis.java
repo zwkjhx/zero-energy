@@ -11,8 +11,8 @@ import io.vertx.ext.web.handler.ChainAuthHandler;
 import io.vertx.up.boot.handler.AuthenticateEndurer;
 import io.vertx.up.commune.secure.Aegis;
 import io.vertx.up.eon.KWeb;
-import io.vertx.up.runtime.ZeroAnno;
 import io.vertx.up.secure.bridge.Bolt;
+import io.vertx.up.supply.Electy;
 
 import java.util.Comparator;
 import java.util.Objects;
@@ -25,7 +25,7 @@ import java.util.concurrent.ConcurrentMap;
  * 401 for authorization only
  */
 public class WallAxis implements HAxis<Router> {
-    private static final Cc<String, Set<Aegis>> CC_WALLS = ZeroAnno.getWalls();
+    private static final Cc<String, Set<Aegis>> CC_WALLS = Electy.ucaWall();
 
     private transient final Vertx vertx;
     private transient final Bolt bolt;

@@ -12,7 +12,7 @@ import io.vertx.up.backbone.invoker.InvokerUtil;
 import io.vertx.up.backbone.invoker.JetSelector;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;
@@ -31,7 +31,7 @@ public class ZeroHttpWorker extends AbstractVerticle {
 
     private static final Annal LOGGER = Annal.get(ZeroHttpWorker.class);
 
-    private static final Set<Receipt> RECEIPTS = ZeroAnno.getReceipts();
+    private static final Set<Receipt> RECEIPTS = Electy.ucaReceipt();
 
     private static final ConcurrentMap<Integer, Invoker> INVOKER_MAP =
         new ConcurrentHashMap<>();

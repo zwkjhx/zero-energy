@@ -10,7 +10,7 @@ import io.vertx.up.atom.agent.Event;
 import io.vertx.up.backbone.Filler;
 import io.vertx.up.eon.KWeb;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 import io.vertx.up.util.Ut;
 import jakarta.ws.rs.DefaultValue;
 
@@ -82,7 +82,7 @@ public class EpsilonIncome implements Income<List<Epsilon<Object>>> {
             () -> null,
             () -> {
                 final Annotation annotation = annotationList.get(VValue.IDX);
-                return ZeroSerializer.getValue(paramType,
+                return ZeroType.value(paramType,
                     Ut.invoke(annotation, "value"));
             });
     }

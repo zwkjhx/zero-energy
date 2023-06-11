@@ -9,7 +9,7 @@ import io.vertx.core.Vertx;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.commune.Envelop;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.uca.job.plugin.JobOutcome;
 import io.vertx.up.unity.Ux;
 import io.vertx.up.util.Ut;
@@ -89,7 +89,7 @@ class OutPut {
                 final EventBus eventBus = this.vertx.eventBus();
                 Element.onceLog(mission,
                     () -> LOGGER.info(VMessage.Job.PHASE.PHASE_5TH_JOB_ASYNC, mission.getCode(), address));
-                eventBus.publish(address, envelop, ZeroOption.getDeliveryOption());
+                eventBus.publish(address, envelop, Electy.optionDelivery());
                 return Future.succeededFuture(envelop);
             }
         } else {

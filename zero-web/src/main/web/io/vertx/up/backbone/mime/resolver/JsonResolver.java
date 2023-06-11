@@ -4,7 +4,7 @@ import io.horizon.uca.log.Annal;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.atom.Epsilon;
 import io.vertx.up.backbone.mime.Resolver;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 import io.vertx.up.util.Ut;
 
 /**
@@ -29,7 +29,7 @@ public class JsonResolver<T> implements Resolver<T> {
             final T defaultValue = (T) income.getDefaultValue();
             income.setValue(defaultValue);
         } else {
-            final Object result = ZeroSerializer.getValue(income.getArgType(), content);
+            final Object result = ZeroType.value(income.getArgType(), content);
             if (null != result) {
                 income.setValue((T) result);
             }

@@ -6,8 +6,8 @@ import io.reactivex.rxjava3.core.Observable;
 import io.vertx.up.annotations.Infusion;
 import io.vertx.up.fn.Fn;
 import io.vertx.up.plugin.Infix;
-import io.vertx.up.runtime.ZeroAnno;
 import io.vertx.up.runtime.ZeroStore;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;
@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentMap;
  */
 class DiInfix {
 
-    private static final Set<Class<?>> TPS = ZeroAnno.getTps();
+    private static final Set<Class<?>> TPS = Electy.clazzInfix();
     private static final ConcurrentMap<Class<?>, Class<?>> INFUSION = infusionMap();
     private transient final Annal logger;
 

@@ -1,10 +1,10 @@
-package io.vertx.up.configuration;
+package io.vertx.boot.configuration;
 
 import io.horizon.specification.boot.HLauncher;
 import io.horizon.spi.BootIo;
 import io.macrocosm.specification.config.HBoot;
 import io.macrocosm.specification.config.HEnergy;
-import io.vertx.up.bang.MixerLauncher;
+import io.vertx.boot.launcher.MixerLauncher;
 import io.vertx.up.util.Ut;
 
 import java.util.Objects;

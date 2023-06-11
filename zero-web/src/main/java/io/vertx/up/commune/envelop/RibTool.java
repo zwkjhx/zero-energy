@@ -5,14 +5,14 @@ import io.horizon.exception.WebException;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 
 import java.util.Objects;
 
 class RibTool {
 
     static <T> JsonObject input(final T data) {
-        final Object serialized = ZeroSerializer.toSupport(data);
+        final Object serialized = ZeroType.valueSupport(data);
         final JsonObject bodyData = new JsonObject();
         bodyData.put(VName.DATA, serialized);
         return bodyData;
@@ -22,7 +22,7 @@ class RibTool {
     static <T> T deserialize(final Object value, final Class<?> clazz) {
         T reference = null;
         if (Objects.nonNull(value)) {
-            final Object result = ZeroSerializer.getValue(clazz, value.toString());
+            final Object result = ZeroType.value(clazz, value.toString());
             reference = Fn.runOr(() -> (T) result, result);
         }
         return reference;

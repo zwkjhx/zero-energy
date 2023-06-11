@@ -8,7 +8,7 @@ import io.vertx.up.atom.worker.Remind;
 import io.vertx.up.backbone.invoker.Invoker;
 import io.vertx.up.backbone.invoker.JetSelector;
 import io.vertx.up.eon.em.container.RemindType;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;
@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  */
 public class AresGrid {
 
-    private static final Set<Remind> SOCKS = ZeroAnno.getSocks();
+    private static final Set<Remind> SOCKS = Electy.ucaWebSocket();
     private static final ConcurrentMap<String, RemindType> TOPIC_MAP = new ConcurrentHashMap<>();
     private static final ConcurrentMap<String, String> W2E = new ConcurrentHashMap<>();
     private static final ConcurrentMap<String, String> E2W = new ConcurrentHashMap<>();

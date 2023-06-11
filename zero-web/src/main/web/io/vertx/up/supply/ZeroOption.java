@@ -1,4 +1,4 @@
-package io.vertx.up.runtime;
+package io.vertx.up.supply;
 
 import io.horizon.uca.cache.Cc;
 import io.horizon.uca.log.Annal;
@@ -25,7 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Resource ZeroPack for yml configuration, Loaded once
  */
-public class ZeroOption {
+class ZeroOption {
 
     private static final Annal LOGGER = Annal.get(ZeroOption.class);
     private static final ConcurrentMap<String, VertxOptions> VX_OPTS =
@@ -45,7 +45,7 @@ public class ZeroOption {
     private static final ConcurrentMap<Integer, SockOptions> SOCK_OPTS =
         new ConcurrentHashMap<>();
     private static final Cc<String, Rotate> CC_ROTATE = Cc.openThread();
-    public static ConcurrentMap<Integer, AtomicInteger> ATOMIC_LOG = new ConcurrentHashMap<>();
+    static ConcurrentMap<Integer, AtomicInteger> ATOMIC_LOG = new ConcurrentHashMap<>();
     private static ClusterOptions CLUSTER;
 
     static {
@@ -112,7 +112,7 @@ public class ZeroOption {
         }, LOGGER);
     }
 
-    public static ConcurrentMap<String, VertxOptions> getVertxOptions() {
+    static ConcurrentMap<String, VertxOptions> getVertxOptions() {
         return VX_OPTS;
     }
 
@@ -121,7 +121,7 @@ public class ZeroOption {
      * application running on Vert.x instance here. Most situations, we configured this
      * part in real production environment.
      */
-    public static ConcurrentMap<Integer, HttpServerOptions> getServerOptions() {
+    static ConcurrentMap<Integer, HttpServerOptions> getServerOptions() {
         return SERVER_OPTS;
     }
 
@@ -129,7 +129,7 @@ public class ZeroOption {
      * Api Gateway Server in micro service, this configuration is for micro-service api-gateway
      * only instead of other kind of Server instances.
      */
-    public static ConcurrentMap<Integer, HttpServerOptions> getGatewayOptions() {
+    static ConcurrentMap<Integer, HttpServerOptions> getGatewayOptions() {
         return GATEWAY_OPTS;
     }
 
@@ -142,11 +142,11 @@ public class ZeroOption {
      * The SockJSHandler will replace the socket server and it's working internal HTTP Server
      * instead.
      */
-    public static ConcurrentMap<Integer, SockOptions> getSockOptions() {
+    static ConcurrentMap<Integer, SockOptions> getSockOptions() {
         return SOCK_OPTS;
     }
 
-    public static ConcurrentMap<Integer, String> getServerNames() {
+    static ConcurrentMap<Integer, String> getServerNames() {
         return SERVER_NAMES;
     }
 
@@ -156,7 +156,7 @@ public class ZeroOption {
      * another way to developers for reactive development instead of Callback/Future mode here.
      * You must involve another sub-project in zero framework to enable this structure
      */
-    public static ConcurrentMap<Integer, HttpServerOptions> getRxOptions() {
+    static ConcurrentMap<Integer, HttpServerOptions> getRxOptions() {
         return RX_OPTS;
     }
 
@@ -169,11 +169,11 @@ public class ZeroOption {
      * 2) Internal communication to be instead of HTTP / RESTful
      * 3) Keep connection Alive always.
      */
-    public static ConcurrentMap<Integer, RpcOptions> getRpcOptions() {
+    static ConcurrentMap<Integer, RpcOptions> getRpcOptions() {
         return RPC_OPTS;
     }
 
-    public static ClusterOptions getClusterOption() {
+    static ClusterOptions getClusterOption() {
         return CLUSTER;
     }
 
@@ -183,7 +183,7 @@ public class ZeroOption {
      * uniform calling,
      * Default for Event Bus
      */
-    public static DeliveryOptions getDeliveryOption() {
+    static DeliveryOptions getDeliveryOption() {
         final Rotate rotate = CC_ROTATE.pick(DeployRotate::new); // Fn.po?lThread(this.ROTATE, DeployRotate::new);
         return rotate.spinDelivery();
     }

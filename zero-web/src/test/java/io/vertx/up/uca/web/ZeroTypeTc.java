@@ -2,7 +2,7 @@ package io.vertx.up.uca.web;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.quiz.ZeroBase;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -16,11 +16,11 @@ enum KTest {
     VALUE
 }
 
-public class ZeroSerializerTc extends ZeroBase {
+public class ZeroTypeTc extends ZeroBase {
 
     private <T> void put(final T input) {
         final JsonObject data = new JsonObject();
-        data.put("request", ZeroSerializer.toSupport(input));
+        data.put("request", ZeroType.valueSupport(input));
         this.logger().info("[TEST] Data = {0}, Type = {1}.",
             data.encode(), null == input ? "null" : input.getClass().getName());
     }

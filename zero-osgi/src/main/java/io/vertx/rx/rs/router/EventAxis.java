@@ -16,7 +16,7 @@ import io.vertx.up.backbone.dispatch.ModeSplitter;
 import io.vertx.up.backbone.router.Hub;
 import io.vertx.up.backbone.router.Verifier;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.util.Set;
@@ -26,7 +26,7 @@ public class EventAxis implements HAxis<Router> {
     /**
      * Extract all events that will be generated route.
      */
-    private static final Set<Event> EVENTS = ZeroAnno.getEvents();
+    private static final Set<Event> EVENTS = Electy.ucaEvent();
 
 
     private static final Cc<String, ModeSplitter> CC_THREADS = Cc.openThread();

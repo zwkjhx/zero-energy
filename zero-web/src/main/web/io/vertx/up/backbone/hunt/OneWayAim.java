@@ -9,7 +9,7 @@ import io.vertx.up.atom.agent.Event;
 import io.vertx.up.backbone.Aim;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroOption;
+import io.vertx.up.supply.Electy;
 
 /**
  * OneWayAim: Event Bus: One-Way
@@ -56,7 +56,7 @@ public class OneWayAim extends BaseAim implements Aim<RoutingContext> {
                  * SUCCESS
                  */
                 if (dataRes.succeeded()) {
-                    bus.<Envelop>request(address, dataRes.result(), ZeroOption.getDeliveryOption(), handler -> {
+                    bus.<Envelop>request(address, dataRes.result(), Electy.optionDelivery(), handler -> {
                         final Envelop response;
                         if (handler.succeeded()) {
                             /*

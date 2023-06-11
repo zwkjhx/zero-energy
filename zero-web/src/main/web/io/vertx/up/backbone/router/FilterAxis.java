@@ -9,7 +9,7 @@ import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.atom.agent.Event;
 import io.vertx.up.fn.Fn;
-import io.vertx.up.runtime.ZeroAnno;
+import io.vertx.up.supply.Electy;
 import io.vertx.up.util.Ut;
 
 import java.lang.reflect.Method;
@@ -21,7 +21,7 @@ public class FilterAxis implements HAxis<Router> {
     private static final Annal LOGGER = Annal.get(FilterAxis.class);
 
     private static final ConcurrentMap<String, Set<Event>> FILTERS =
-        ZeroAnno.getFilters();
+        Electy.ucaFilter();
 
     @Override
     public void mount(final Router router) {

@@ -2,7 +2,7 @@ package io.vertx.up.backbone.argument;
 
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.up.backbone.Filler;
-import io.vertx.up.runtime.ZeroSerializer;
+import io.vertx.up.runtime.ZeroType;
 
 /**
  * 「Co」JSR311 for .@PathParam
@@ -23,6 +23,6 @@ public class PathFiller implements Filler {
                         final Class<?> paramType,
                         final RoutingContext context) {
         // 1. Get path information
-        return ZeroSerializer.getValue(paramType, context.pathParam(name));
+        return ZeroType.value(paramType, context.pathParam(name));
     }
 }
