@@ -1,6 +1,6 @@
 package io.vertx.up.uca.job.phase;
 
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.horizon.eon.VMessage;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
@@ -19,13 +19,13 @@ import java.util.Objects;
 class RunOn {
     private static final Annal LOGGER = Annal.get(RunOn.class);
     private transient final Vertx vertx;
-    private transient final Refer underway = new Refer();
+    private transient final KRef underway = new KRef();
 
     RunOn(final Vertx vertx) {
         this.vertx = vertx;
     }
 
-    RunOn bind(final Refer underway) {
+    RunOn bind(final KRef underway) {
         if (Objects.nonNull(underway)) {
             this.underway.add(underway.get());
         }

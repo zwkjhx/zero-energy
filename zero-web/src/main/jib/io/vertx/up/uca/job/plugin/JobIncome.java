@@ -1,6 +1,6 @@
 package io.vertx.up.uca.job.plugin;
 
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.vertx.core.Future;
 import io.vertx.up.commune.Envelop;
 import io.vertx.up.unity.Ux;
@@ -19,8 +19,8 @@ public interface JobIncome {
      * It's underway data passing from
      * KIncome -> Job -> Outcome
      */
-    default Future<Refer> underway() {
-        final Refer refer = new Refer();
+    default Future<KRef> underway() {
+        final KRef refer = new KRef();
         return Ux.future(refer);
     }
 }

@@ -67,7 +67,7 @@ final class Outcome {
          */
         if (!response.headWritten()) {
             /*
-             * Refer: https://vertx.io/blog/writing-secure-vert-x-web-apps/
+             * KRef: https://vertx.io/blog/writing-secure-vert-x-web-apps/
              * */
             response
                 /*
@@ -112,7 +112,7 @@ final class Outcome {
              */
             if (!response.ended()) {
                 /*
-                 * Set Date Header, Refer to RESTful Cookbook
+                 * Set Date Header, KRef to RESTful Cookbook
                  * This header means when happened ( Error / Success )
                  */
                 response.putHeader(HttpHeaders.DATE, Instant.now().toString());

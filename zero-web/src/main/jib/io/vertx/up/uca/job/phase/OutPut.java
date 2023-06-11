@@ -1,6 +1,6 @@
 package io.vertx.up.uca.job.phase;
 
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.horizon.eon.VMessage;
 import io.horizon.exception.WebException;
 import io.horizon.uca.log.Annal;
@@ -19,13 +19,13 @@ import java.util.Objects;
 class OutPut {
     private static final Annal LOGGER = Annal.get(OutPut.class);
     private transient final Vertx vertx;
-    private transient final Refer assist = new Refer();
+    private transient final KRef assist = new KRef();
 
     OutPut(final Vertx vertx) {
         this.vertx = vertx;
     }
 
-    OutPut bind(final Refer assist) {
+    OutPut bind(final KRef assist) {
         if (Objects.nonNull(assist)) {
             this.assist.add(assist.get());
         }

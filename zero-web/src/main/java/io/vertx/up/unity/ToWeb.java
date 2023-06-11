@@ -1,6 +1,6 @@
 package io.vertx.up.unity;
 
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.vertx.core.*;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.eventbus.EventBus;
@@ -84,7 +84,7 @@ class ToWeb {
      * Job Component
      */
     static Object toParameter(final Envelop envelop, final Class<?> type,
-                              final Mission mission, final Refer underway) {
+                              final Mission mission, final KRef underway) {
         if (Envelop.class == type) {
             /*
              * Envelop
@@ -137,7 +137,7 @@ class ToWeb {
              * Actor/Director must
              */
             return mission;
-        } else if (is(type, Refer.class)) {
+        } else if (is(type, KRef.class)) {
             /*
              * Bind Assist call here
              */

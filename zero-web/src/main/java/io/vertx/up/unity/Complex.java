@@ -1,6 +1,6 @@
 package io.vertx.up.unity;
 
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.horizon.uca.qr.Pagination;
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonArray;
@@ -76,7 +76,7 @@ class Complex {
         /*
          * First response to get based on `pageConsumer`
          */
-        final Refer firstResult = new Refer();
+        final KRef firstResult = new KRef();
         return pageConsumer.apply(first)
             /*
              * Get response R,

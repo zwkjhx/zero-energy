@@ -1,6 +1,6 @@
 package io.vertx.up.uca.job.phase;
 
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.horizon.eon.VMessage;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
@@ -20,13 +20,13 @@ class Input {
     private static final Annal LOGGER = Annal.get(Input.class);
 
     private transient final Vertx vertx;
-    private transient final Refer underway = new Refer();
+    private transient final KRef underway = new KRef();
 
     Input(final Vertx vertx) {
         this.vertx = vertx;
     }
 
-    Refer underway() {
+    KRef underway() {
         return this.underway;
     }
 
@@ -119,7 +119,7 @@ class Input {
                      * Here provide extension for JobIncome
                      * 1 - You can do some operations in JobIncome to calculate underway data such as
                      *     dictionary data here.
-                     * 2 - Also you can put some assist data into `Refer`, this `Refer` will be used
+                     * 2 - Also you can put some assist data into `KRef`, this `KRef` will be used
                      *     by major code logical instead of `re-calculate` the data again.
                      * 3 - For performance design, this structure could be chain passed in:
                      *     KIncome -> Job ( Channel ) -> Outcome

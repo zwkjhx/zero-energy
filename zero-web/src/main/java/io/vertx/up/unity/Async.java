@@ -1,7 +1,7 @@
 package io.vertx.up.unity;
 
 import io.aeon.runtime.channel.Pocket;
-import io.horizon.atom.common.Refer;
+import io.horizon.atom.program.KRef;
 import io.horizon.eon.VValue;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.Future;
@@ -70,7 +70,7 @@ class Async {
                      *    .compose(future[2])
                      *    .compose(...)
                      */
-                    final Refer response = new Refer();
+                    final KRef response = new KRef();
                     response.add(input);
 
                     for (int idx = 1; idx < queues.size(); idx++) {
