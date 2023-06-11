@@ -14,7 +14,7 @@ import io.macrocosm.specification.program.HArk;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.annotations.Off;
 import io.vertx.up.annotations.On;
-import io.vertx.up.atom.sch.KTimer;
+import io.vertx.up.atom.sch.KScheduler;
 import io.vertx.up.eon.em.EmJob;
 import io.vertx.up.exception.web._409JobFormulaErrorException;
 import io.vertx.up.exception.web._501JobOnMissingException;
@@ -59,7 +59,7 @@ public class Mission implements Serializable {
      * For above code, the system will set the timeout parameter of current worker ( Background Job ) and it's
      * not related to scheduling instead.
      *
-     * So I moved the code from `KTimer` into `Mission` here.
+     * So I moved the code from `KScheduler` into `Mission` here.
      *
      * There are two mode focus on this parameter calculation as:
      * 1) From programming part:
@@ -122,7 +122,7 @@ public class Mission implements Serializable {
     private HArk ark;
 
     @JsonIgnore
-    private KTimer timer;
+    private KScheduler timer;
 
     public EmJob.Status getStatus() {
         return this.status;
@@ -351,12 +351,12 @@ public class Mission implements Serializable {
         return this.ark;
     }
 
-    public Mission timer(final KTimer timer) {
+    public Mission timer(final KScheduler timer) {
         this.timer = timer;
         return this;
     }
 
-    public KTimer timer() {
+    public KScheduler timer() {
         return this.timer;
     }
 

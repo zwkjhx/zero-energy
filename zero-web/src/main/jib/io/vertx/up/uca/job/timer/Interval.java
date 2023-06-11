@@ -1,7 +1,7 @@
 package io.vertx.up.uca.job.timer;
 
 import io.vertx.core.Handler;
-import io.vertx.up.atom.sch.KTimer;
+import io.vertx.up.atom.sch.KScheduler;
 
 import java.util.function.Consumer;
 
@@ -29,7 +29,7 @@ public interface Interval {
      * 1) Wait
      * 2) Run
      * 3) Repeat Or End
-     * 4) Update KTimer `runAt` of next time
+     * 4) Update KScheduler `runAt` of next time
      */
 
     /**
@@ -47,7 +47,7 @@ public interface Interval {
         this.startAt(actuator, null);
     }
 
-    void startAt(Handler<Long> actuator, KTimer timer);
+    void startAt(Handler<Long> actuator, KScheduler timer);
 
-    void restartAt(Handler<Long> actuator, KTimer timer);
+    void restartAt(Handler<Long> actuator, KScheduler timer);
 }

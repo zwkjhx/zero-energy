@@ -6,7 +6,7 @@ import io.horizon.eon.VString;
 import io.horizon.uca.log.Annal;
 import io.vertx.core.json.JsonObject;
 import io.vertx.up.annotations.Job;
-import io.vertx.up.atom.sch.KTimer;
+import io.vertx.up.atom.sch.KScheduler;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.backbone.Extractor;
 import io.vertx.up.eon.KName;
@@ -92,19 +92,19 @@ public class JobExtractor implements Extractor<Mission> {
 
     private void setTimer(final Mission mission, final Annotation annotation) {
         /* Timer of Mission Building */
-        final KTimer timer = new KTimer(mission.getCode());
+        final KScheduler timer = new KScheduler(mission.getCode());
         {
             /* duration / durationUnit */
             final TimeUnit durationUnit = Ut.invoke(annotation, "durationUnit");
             final long duration = Ut.invoke(annotation, "duration");
             // duration = durationUnit.toMillis(duration);
-            timer.scheduler(duration, durationUnit);
+            timer.configure(duration, durationUnit);
         }
         /* formula calculate */
         final String runFormula = Ut.invoke(annotation, "formula");
         // Error-60054 Detect
         mission.detectPre(runFormula);
-        timer.scheduler(runFormula, null);
+        timer.configure(runFormula, null);
         mission.timer(timer);
     }
 

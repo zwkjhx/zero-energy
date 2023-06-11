@@ -1,13 +1,15 @@
 package io.vertx.up.unity;
 
-import io.horizon.atom.program.KRef;
-import io.horizon.atom.program.Kv;
 import io.horizon.atom.datamation.KDictAtom;
 import io.horizon.atom.datamation.KDictConfig;
+import io.horizon.atom.datamation.KDictUse;
+import io.horizon.atom.program.KRef;
+import io.horizon.atom.program.Kv;
 import io.horizon.eon.VString;
 import io.horizon.eon.em.typed.ChangeFlag;
 import io.horizon.exception.WebException;
 import io.horizon.uca.qr.Pagination;
+import io.modello.atom.app.KIntegration;
 import io.modello.atom.normalize.KRuleTerm;
 import io.modello.specification.HRecord;
 import io.vertx.core.*;
@@ -19,10 +21,8 @@ import io.vertx.core.shareddata.ClusterSerializable;
 import io.vertx.ext.auth.User;
 import io.vertx.ext.web.FileUpload;
 import io.vertx.ext.web.RoutingContext;
-import io.horizon.atom.datamation.KDictUse;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.commune.Envelop;
-import io.modello.atom.app.KIntegration;
 import io.vertx.up.commune.record.Apt;
 import io.vertx.up.commune.secure.AegisItem;
 import io.vertx.up.commune.secure.Vis;
@@ -1242,12 +1242,6 @@ public final class Ux {
     public static class Ldap {
         public static UxLdap on(final KIntegration integration) {
             return CACHE.CC_LDAP.pick(() -> new UxLdap(integration), String.valueOf(integration.hashCode()));
-        }
-    }
-
-    public static class Timer {
-        public static UxTimer on() {
-            return new UxTimer();
         }
     }
 

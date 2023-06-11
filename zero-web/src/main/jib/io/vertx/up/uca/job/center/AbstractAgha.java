@@ -157,9 +157,9 @@ public abstract class AbstractAgha implements Agha {
             this.moveOn(mission, true);
             /*
              * Read threshold
-             * 「OLD」for KTimer not null, but in ONCE or some spec types,
+             * 「OLD」for KScheduler not null, but in ONCE or some spec types,
              * the timer could be null
-             * final KTimer timer = mission.timer();
+             * final KScheduler timer = mission.timer();
              * Objects.requireNonNull(timer);
              */
             final long threshold = mission.timeout();

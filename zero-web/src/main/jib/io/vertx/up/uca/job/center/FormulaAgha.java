@@ -2,7 +2,7 @@ package io.vertx.up.uca.job.center;
 
 import io.vertx.core.Future;
 import io.vertx.core.Promise;
-import io.vertx.up.atom.sch.KTimer;
+import io.vertx.up.atom.sch.KScheduler;
 import io.vertx.up.atom.worker.Mission;
 import io.vertx.up.eon.em.EmJob;
 import io.vertx.up.uca.job.timer.Interval;
@@ -22,7 +22,7 @@ public class FormulaAgha extends AbstractAgha {
     private Future<Long> execute(final Mission mission) {
         final Promise<Long> promise = Promise.promise();
         final Interval interval = this.interval();
-        final KTimer timer = mission.timer();
+        final KScheduler timer = mission.timer();
         interval.restartAt((timeId) -> {
             // STOPPED -> READY
             if (EmJob.Status.STOPPED == mission.getStatus()) {

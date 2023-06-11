@@ -5,7 +5,7 @@ import io.horizon.uca.log.Annal;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.up.annotations.Contract;
-import io.vertx.up.atom.sch.KTimer;
+import io.vertx.up.atom.sch.KScheduler;
 import io.vertx.up.util.Ut;
 
 import java.time.format.DateTimeFormatter;
@@ -42,11 +42,11 @@ public class VertxInterval implements Interval {
      *
      * The 1ms is started. When following condition has been triggered, here are two code logical
      *
-     * 1) KTimer is null        ( Once Job )
-     * 2) KTimer is not null    ( Legacy Plan Job )
+     * 1) KScheduler is null        ( Once Job )
+     * 2) KScheduler is not null    ( Legacy Plan Job )
      */
     @Override
-    public void startAt(final Handler<Long> actuator, final KTimer timer) {
+    public void startAt(final Handler<Long> actuator, final KScheduler timer) {
         if (Objects.isNull(timer)) {
             /*
              * Because timer is null, delay ms is not needed
@@ -86,7 +86,7 @@ public class VertxInterval implements Interval {
     }
 
     @Override
-    public void restartAt(final Handler<Long> actuator, final KTimer timer) {
+    public void restartAt(final Handler<Long> actuator, final KScheduler timer) {
         if (Objects.isNull(timer)) {
             LOGGER.info(VMessage.Job.INTERVAL.RESTART);
             this.vertx.setTimer(START_UP_MS, actuator);
