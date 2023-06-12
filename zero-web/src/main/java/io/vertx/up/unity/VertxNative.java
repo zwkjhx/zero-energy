@@ -11,13 +11,13 @@ class VertxNative {
         return ZeroLauncher.nativeRef();
     }
 
-    static WorkerExecutor nativeWorker(final String name, final Integer minutes) {
-        return nativeVertx().createSharedWorkerExecutor(name, 2, minutes, TimeUnit.MINUTES);
+    static WorkerExecutor nativeWorker(final String name, final Vertx vertx, final Integer minutes) {
+        return vertx.createSharedWorkerExecutor(name, 2, minutes, TimeUnit.MINUTES);
     }
 
-    static <T> Future<T> nativeWorker(final String name, final Handler<Promise<T>> handler) {
+    static <T> Future<T> nativeWorker(final String name, final Vertx vertx, final Handler<Promise<T>> handler) {
         final Promise<T> promise = Promise.promise();
-        final WorkerExecutor executor = nativeWorker(name, 10);
+        final WorkerExecutor executor = nativeWorker(name, vertx, 10);
         executor.executeBlocking(
             handler,
             post -> {
